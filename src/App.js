@@ -1,20 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import YouTube from 'react-youtube';
+
+import header from './assets/header_image.png';
+import profile from './assets/profile.png';
+import video from './assets/intro_video.mp4'
 import './App.css';
 
 class App extends Component {
   render() {
+    const youtubeOpts = {
+      height: '390',
+      width: '640',
+        playerVars: {
+      autoplay: 0
+      }
+    };
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <section>
+          <header className="Header">
+            <h1 className="HeaderTitle">Hello, kirimin-chan</h1>
+            <img className='HeaderImage' src={header} />  
+          </header>
+        </section>
+        <section className="Introduction">
+          <div className="IntroductionContents">
+            <div className="IntroductionYoutube">
+              <YouTube className="IntroductionYoutubeFrame"
+                  videoId="bGTEriE9zu0"
+                  opts={youtubeOpts}
+                  onReady={this._onReady}
+                />
+              </div>
+            <h1 className="IntroductionTitle">じこしょうかい</h1>
+            {/* <img className='IntroductionProfile' src={profile} />   */}
+          </div>
+        </section>
       </div>
     );
+  }
+
+  _onReady(event) {
+    // event.target.playVideo();
+    // event.target.mute();
   }
 }
 

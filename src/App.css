@@ -1,21 +1,59 @@
 .App {
+}
+
+.Header {
+  background-color: #F48FB1;
+}
+
+.HeaderImage {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.HeaderTitle {
   text-align: center;
+  font-size: 4em;
+  color: #FFF;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Introduction {
+  height: 600px;
+  background-color: #FFF;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.IntroductionTitle {
+  padding-top: 64px;
+  text-align: center;
+  color: #03A9F4;
+  font-size: 3em;
 }
 
-.App-title {
-  font-size: 1.5em;
+.IntroductionContents {
+  flex-direction: row;
+}
+
+.IntroductionProfile {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.IntroductionYoutube {
+  position:relative;
+  width:100%;
+  padding-top:56.25%;
+}
+
+.IntroductionYoutubeFrame {
+  position:absolute;
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
 }
 
 .App-intro {
