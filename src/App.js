@@ -106,8 +106,9 @@ class App extends Component {
             <li className="LicenseHeaderText">著しく暴力的、反社会的な内容、またはゾーニングへの配慮がないキャラクターの使用</li>
           </ul>
         </section>
-        <section>
-          <h1 className="">■おといあわせ</h1>
+        <section className="Contact">
+          <h1>■おといあわせ</h1>
+            <p className="ContactText">きりみんちゃんに関するお問い合わせは、minkarakirimade@gmail.comか、Twitterで@kiriminにリプライやDMしてください。</p>
         </section>
       </div>
     );
