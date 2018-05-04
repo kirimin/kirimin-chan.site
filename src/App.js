@@ -42,11 +42,15 @@ class App extends Component {
     })
     return (
       <div className="App">
-        <section>
+         <section>
           <header className="Header">
             <h1 className="HeaderTitle">Hello, kirimin-chan</h1>
             <div className="HeaderContainer">
               <p className="HeaderText1">Virtual<br/>　Little girl<br/>　　Programmer</p>
+              <div className="FloatingButtons">
+                <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="HeaderChannelButton">きりみんちゃんねるへ</a>
+                <a href='https://twitter.com/intent/tweet?text=Hello, kirimin-chan&url=https://www.url.url/' onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow" className="HeaderShereButton">Twitterでシェア</a>
+              </div>
               <div className='HeaderImageCover' />
               <img className='HeaderImage' src={header} />
             </div>
@@ -92,6 +96,7 @@ class App extends Component {
         <section className="Links">
           <h1>■りんく</h1>
           <div className="LinksContainer">
+            <a className="LinksButton" href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w">きりみんちゃんねる(Youtube)</a>
             <a className="LinksButton" href="https://marshmallow-qa.com/kirimin">マシュマロ(しつもん)</a>
             <a className="LinksButton" href="https://www.pixiv.net/fanbox/creator/13627594">FANBOX(ぶろぐ)</a>
             <a className="LinksButton" href="https://twitter.com/kirimin">ついったー</a>
