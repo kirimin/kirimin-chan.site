@@ -65,21 +65,21 @@ class App extends Component {
           <h1 className="IntroductionTitle">■じこしょうかい</h1>
           <div className="IntroductionContents">
             <div className="IntroductionTableProfile">
-              <p className="IntroductionTableTitle">なまえ　　：きりみん</p>
-              <p className="IntroductionTableTitle">ねんれい　：７さい</p>
-              <p className="IntroductionTableTitle">しんちょう：１１９cm</p>
-              <p className="IntroductionTableTitle">たいじゅう：２２kg</p>
-              <p className="IntroductionTableTitle">しゅみ　　：プログラミング、おえかき、ゲーム</p>
+              <p className="IntroductionTableText">なまえ　　：きりみん</p>
+              <p className="IntroductionTableText">ねんれい　：７さい</p>
+              <p className="IntroductionTableText">しんちょう：１１９cm</p>
+              <p className="IntroductionTableText">たいじゅう：２２kg</p>
+              <p className="IntroductionTableText">しゅみ　　：プログラミング、おえかき、ゲーム</p>
             </div>
             <div className="IntroductionTableDescribe">
-              <p className="IntroductionTableTitle">きりみんちゃんはバーチャル幼女プログラマーです。VTuberとしてバーチャルLTやライブコーディングなど、ギークな動画を発信していくよ。</p>
+              <p className="IntroductionTableText">きりみんちゃんはバーチャル幼女プログラマーです。VTuberとしてバーチャルLTやライブコーディングなど、ギークな動画を発信していくよ。</p>
             </div>
             <img className='IntroductionSD' src={sd} />
-            <div className="IntroductionTableProfile">
-              <p className="IntroductionTableTitle">きりみんちゃんに関する話題は#きりみんちゃんねる、ファンアートなど二次創作は#kirimin_techでツイートしてくれるとうれしいな！</p>
+            <div className="IntroductionTableHashTag">
+              <p className="IntroductionTableText">きりみんちゃんに関する話題は<a href='https://twitter.com/search?q=%23%E3%81%8D%E3%82%8A%E3%81%BF%E3%82%93%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8B&src=typd'>#きりみんちゃんねる</a>、ファンアートなど二次創作は<a href='https://twitter.com/search?q=%23kirimin_tech&src=typd'>#kirimin_tech</a>でツイートしてくれるとうれしいです！</p>
             </div>
-            <div className="IntroductionTableDescribe">
-              <p className="IntroductionTableTitle">【きりみんちゃんねる】【Twitter】【FANbox】【BOOTH】</p>
+            <div className="IntroductionTableRequest">
+              <p className="IntroductionTableText">マシュマロでしつもん、リクエストを募集しているよ！プログラミングに関するしつもんなどを気軽に送ってくれたら、それをネタに動画をつくったりするよ。</p>
             </div>
           </div>
         </section>
@@ -87,6 +87,14 @@ class App extends Component {
           <h1>■どうが</h1>
           <div className="VideoContents">
             {videos}
+          </div>
+        </section>
+        <section className="Links">
+          <h1>■りんく</h1>
+          <div className="LinksContainer">
+            <a className="LinksButton" href="https://marshmallow-qa.com/kirimin">マシュマロ(しつもん)</a>
+            <a className="LinksButton" href="https://www.pixiv.net/fanbox/creator/13627594">FANBOX(ぶろぐ)</a>
+            <a className="LinksButton" href="https://twitter.com/kirimin">ついったー</a>
           </div>
         </section>
         <section className="License">
