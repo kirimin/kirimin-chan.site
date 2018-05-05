@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 
 import header from './assets/header_image.png';
+import op1 from './assets/op_image1.png'
+import op2 from './assets/op_image2.png'
+import op3 from './assets/op_image3.png'
 import sd from './assets/sd.png'
 import './App.css';
 
@@ -49,8 +52,13 @@ class App extends Component {
               <p className="HeaderText1">Virtual<br/>　Little girl<br/>　　Programmer</p>
               <div className="FloatingButtons">
                 <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="HeaderChannelButton">きりみんちゃんねるへ</a>
-                <a href='https://twitter.com/intent/tweet?text=Hello, kirimin-chan&url=https://www.url.url/' onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow" className="HeaderShereButton">Twitterでシェア</a>
               </div>
+              <div className='HeaderOpImage1Cover' />
+              <img className='HeaderOpImage1' src={op1}/>
+              <div className='HeaderOpImage2Cover' />
+              <img className='HeaderOpImage2' src={op2}/>
+              <div className='HeaderOpImage3Cover' />
+              <img className='HeaderOpImage3' src={op3}/>
               <div className='HeaderImageCover' />
               <img className='HeaderImage' src={header} />
             </div>
@@ -66,7 +74,8 @@ class App extends Component {
           </div>
         </section>
         <section className="Introduction">
-          <h1 className="IntroductionTitle">■じこしょうかい</h1>
+          <h1 className="IntroductionTitle">じこしょうかい</h1>
+          <hr/>
           <div className="IntroductionContents">
             <div className="IntroductionTableProfile">
               <p className="IntroductionTableText">なまえ　　：きりみん</p>
@@ -88,13 +97,15 @@ class App extends Component {
           </div>
         </section>
         <section className="Video">
-          <h1>■どうが</h1>
+          <h1>どうが</h1>
+          <hr/>
           <div className="VideoContents">
             {videos}
           </div>
         </section>
         <section className="Links">
-          <h1>■りんく</h1>
+          <h1>りんく</h1>
+          <hr/>
           <div className="LinksContainer">
             <a className="LinksButton" href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w">きりみんちゃんねる(Youtube)</a>
             <a className="LinksButton" href="https://marshmallow-qa.com/kirimin">マシュマロ(しつもん)</a>
@@ -103,7 +114,8 @@ class App extends Component {
           </div>
         </section>
         <section className="License">
-          <h1 >■らいせんす</h1>
+          <h1 >らいせんす</h1>
+          <hr/>
           <h2 className="LicenseHeaderTextTitle">きりみんちゃんのキャラクターライセンスについて</h2>
           <p className="LicenseHeaderText">きりみんちゃんのファンアートなどの二次創作利用はだいかんげいだよ！個人での範囲内であれば商用利用もおっけーだよ！</p>
           <p className="LicenseHeaderText">企業や営利団体での使用は個別におといあわせしてね！</p>
@@ -120,8 +132,9 @@ class App extends Component {
           </ul>
         </section>
         <section className="Contact">
-          <h1>■おといあわせ</h1>
-            <p className="ContactText">きりみんちゃんに関するお問い合わせは、minkarakirimade@gmail.comか、Twitterで@kiriminにリプライやDMしてください。</p>
+          <h1>おといあわせ</h1>
+          <hr/>
+          <p className="ContactText">きりみんちゃんに関するお問い合わせは、minkarakirimade@gmail.comか、Twitterで@kiriminにリプライやDMしてください。</p>
         </section>
       </div>
     );

@@ -1,14 +1,25 @@
 .App {}
 
+hr {
+  height: 3px;
+  border: none;
+  border-top: 3px #03A9F4 dashed;
+}
+
 .Header {
-  background-color: #F48FB1;
-  animation: headerBackground 6s ease 0s 1 alternate none running;
+  background-color: #2196F3;
+  animation: headerBackgroundAnimation 1s ease 2s forwards;
+}
+@keyframes headerBackgroundAnimation {
+  0% {background-color: #2196F3}
+  100% {background-color: #F48FB1}
 }
 
 h1 {
   padding-top: 64px;
   color: #03A9F4;
-  font-size: 3em;
+  font-size: 3rem;
+  font-family: "Kodomo"
 }
 
 .HeaderContainer {
@@ -18,29 +29,171 @@ h1 {
 .HeaderTitle {
   text-align: center;
   font-size: 4rem;
+  font-family: 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
   color: #FFF;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 16px;
   padding-bottom: 16px;
-  animation: headerTitleAnimation 6s ease 0s 1 alternate none running;
+  opacity: 0;
+  animation: headerTitleAnimation 1.5s ease 2s forwards;
+}
+@keyframes headerTitleAnimation {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
 
 .HeaderText1 {
   position: absolute;
   top: 25%;
   left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -moz-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  -o-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   margin: auto;
   color: #FFF;
   font-size: 4em;
-  animation: fadeInOut 4s ease 0s 1 alternate none running;
-  -webkit-animation: fadeInOut 4s ease 0s 1 alternate none running;
+  font-family: 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
+  animation: headerText1Animation 2s ease 0.5s forwards;
   opacity: 0;
+  z-index: 3;
+}
+@keyframes headerText1Animation {
+  30% {opacity: 1}
+  60% {opacity: 1}
+  100% {opacity: 0}
+}
+
+.HeaderText2 {
+  position: absolute;
+  top: 25%;
+  right: 0%;
+  margin-right: 32px;
+  color: #FFF;
+  font-size: 4em;
+  font-family: 'Kodomo';
+  animation: headerText2Animation 2s ease 8s forwards;
+  opacity: 0;
+  z-index: 3;
+}
+@keyframes headerText2Animation {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.HeaderOpImage1 {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  vertical-align: bottom;
+  animation: HeaderOpImageAnimation 1ms ease 4.5s forwards, HeaderOpImageAnimationAfter 1ms ease 5.5s forwards;
+  opacity: 0;
+  z-index: 0;
+}
+.HeaderOpImage2 {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  vertical-align: bottom;
+  animation: HeaderOpImageAnimation 1ms ease 5.5s forwards, HeaderOpImageAnimationAfter 1ms ease 6.5s forwards;
+  opacity: 0;
+  z-index: 0;
+}
+.HeaderOpImage3 {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  vertical-align: bottom;
+  animation: HeaderOpImageAnimation 1ms ease 6.5s forwards, HeaderOpImageAnimationAfter 1ms ease 7.5s forwards;
+  opacity: 0;
+  z-index: 0;
+}
+@keyframes HeaderOpImageAnimation {
+  0% {opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes HeaderOpImageAnimationAfter {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.HeaderOpImage1Cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  vertical-align: bottom;
+  background-color: #EFEBE9;
+  animation: headerImageCoverAnimation 1s ease 4s forwards;
+  z-index: 1;
+}
+.HeaderOpImage2Cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  vertical-align: bottom;
+  background-color: #EFEBE9;
+  animation: headerImageCoverAnimation 1s ease 5s forwards;
+  z-index: 1;
+}
+.HeaderOpImage3Cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  vertical-align: bottom;
+  background-color: #EFEBE9;
+  animation: headerImageCoverAnimation 1s ease 6s forwards;
+  z-index: 1;
+}
+
+.HeaderImage {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  animation: headerImageAnimation 1ms ease 7.5s forwards;
+  opacity: 0;
+  z-index: 0;
+}
+@keyframes headerImageAnimation {
+  0% {opacity: 0}
+  100% { opacity: 1}
+}
+
+.HeaderImageCover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  vertical-align: bottom;
+  background-color: #EFEBE9;
+  animation: headerImageCoverAnimation 1s ease 7s forwards;
+  z-index: 1;
+}
+@keyframes headerImageCoverAnimation {
+  0% {
+    opacity: 1;
+    transform: translateX(100%)
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0%)
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-100%)
+  }
 }
 
 .FloatingButtons {
@@ -51,6 +204,11 @@ h1 {
   top: 10%;
   right: 0%;
   margin-right: 16px;
+  z-index: 2;
+}
+
+.FloatingButtons a:hover {
+  opacity: 1;
 }
 
 .HeaderChannelButton {
@@ -77,70 +235,6 @@ h1 {
   opacity: 0.2;
 }
 
-.FloatingButtons a:hover {
-  opacity: 1;
-}
-
-.HeaderImage {
-  max-width: 100%;
-  height: auto;
-  vertical-align: bottom;
-  animation: headerImageAnimation 7s ease 0s 1 alternate none running;
-}
-
-.HeaderImageCover {
-  max-width: 100%;
-  height: auto;
-  vertical-align: bottom;
-  background-color: F48FB1;
-  animation: headerImageAnimation 7s ease 0s 1 alternate none running;
-}
-
-@keyframes headerBackground {
-  0% {background-color: #64B5F6}
-  70% {background-color: #64B5F6}
-  100% {background-color: #F48FB1}
-}
-
-@keyframes headerTitleAnimation {
-  0% {opacity: 0}
-  60% {opacity: 0}
-  100% {opacity: 1}
-}
-
-@keyframes fadeInOut {
-  0% {opacity: 0}
-  10% {opacity: 0}
-  50% {opacity: 1}
-  70% {opacity: 1}
-  100% {opacity: 0}
-}
-
-@-webkit-keyframes fadeInOut {
-  0% {opacity: 0}
-  10% {opacity: 0}
-  50% {opacity: 1}
-  70% {opacity: 1}
-  100% {opacity: 0}
-}
-
-@keyframes headerImageAnimation {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-
-  90% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
 .MovieYoutube {
   position:relative;
   width:100%;
@@ -158,10 +252,6 @@ h1 {
 .Introduction {
   margin-left: 64px;
   margin-right: 64px;
-  background-color: #FFF;
-}
-
-.IntroductionTitle {
 }
 
 .IntroductionContents {
@@ -307,15 +397,30 @@ h1 {
   margin-bottom: 80px; 
 }
 
-@media screen and (max-width: 480px) { /* スマホ向けCSS */
+@media screen and (max-width: 480px) { /* smart phones */
   html { 
     font-size: 75%;
+  }
+
+  .HeaderTitle {
+    font-size: 2rem;
+  }
+
+  .FloatingButtons {
+    top: 50%;
+    right: 0%;
+    margin-right: 16px;
+    z-index: 2;
+  }
+
+  .HeaderText1 {
+    top: 30%;
+    font-size: 1.5em;
   }
 
   .Introduction {
     margin-left: 16px;
     margin-right: 16px;
-    background-color: #FFF;
   }  
 
   .IntroductionTableProfile {
@@ -327,5 +432,52 @@ h1 {
   .IntroductionTableDescribe {
     width: 100%;
     padding: 16px;
+  }
+
+  .Video {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .VideoContents {
+    justify-content: center;
+    align-items: center;
+  }  
+
+  .Video h1 {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .VideoCard {
+    width: 320px;
+    height: auto;
+    margin-right: 0px;
+    margin-bottom: 32px;
+    background-color: #FFF;
+    padding: 0px;
+    border-radius: 0px;
+  }
+
+  .VideoCardTitle {
+    color: #5D4037;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .Links {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .License {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .Contact {
+    margin-left: 16px;
+    margin-right: 16px;
   }  
 }

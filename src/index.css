@@ -34,5 +34,15 @@ input, textarea, .spa-x-user-select {
 
 body {
   height: 100%;
-  font-family: 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
+  font-family:'Bokutachi', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
+}
+
+@font-face {
+  font-family: 'Bokutachi';
+  src: url("fonts/bokutachi.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Kodomo';
+  src: url("fonts/KodomoRounded.otf") format("opentype")
 }
