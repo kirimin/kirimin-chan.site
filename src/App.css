@@ -159,7 +159,7 @@ h1 {
 }
 
 .HeaderImage {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   vertical-align: bottom;
   animation: headerImageAnimation 1ms ease 7.5s forwards;

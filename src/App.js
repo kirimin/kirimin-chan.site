@@ -52,6 +52,7 @@ class App extends Component {
               <p className="HeaderText1">Virtual<br/>　Little girl<br/>　　Programmer</p>
               <div className="FloatingButtons">
                 <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="HeaderChannelButton">きりみんちゃんねるへ</a>
+                <a href='https://twitter.com/intent/tweet?text=きりみんちゃん.site&url=https://kirimin-chan.site/&hashtags=きりみんちゃんねる' className="HeaderShereButton">ついーとする</a>
               </div>
               <div className='HeaderOpImage1Cover' />
               <img className='HeaderOpImage1' src={op1}/>
