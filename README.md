@@ -1,1 +1,1 @@
-# kirimin.ch
+[きりみん.site](http://kirimin-chan.site)
