@@ -367,6 +367,17 @@ h1 {
   background-color: #B3E5FC
 }
 
+.Gallery {
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+.GalleryContainer img {
+  width: 400px;
+  height: auto;
+  margin: 32px;
+}
+
 .License {
   margin-left: 64px;
   margin-right: 64px;  
@@ -471,6 +482,11 @@ h1 {
     margin-right: 16px;
   }
 
+  .Gallery {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  
   .License {
     margin-left: 16px;
     margin-right: 16px;

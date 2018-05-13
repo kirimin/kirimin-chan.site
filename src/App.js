@@ -114,6 +114,17 @@ class App extends Component {
             <a className="LinksButton" href="https://twitter.com/kirimin">ついったー</a>
           </div>
         </section>
+        <section className="Gallery">
+          <h1>ぎゃらりー</h1>
+          <hr/>
+          <p>きりみんちゃんの画像(フリー素材)だよ。自由につかってね。</p>
+          <div className="GalleryContainer">
+            <img src="./gallery/lgtm1.png"/>
+            <img src="./gallery/lgtm2.png"/>
+            <img src="./gallery/teigi_taisha.jpg"/>
+            <img src="./gallery/i_think_so_too.jpg"/>
+          </div>
+        </section>
         <section className="License">
           <h1 >らいせんす</h1>
           <hr/>
@@ -154,7 +165,6 @@ class App extends Component {
     event.target.playVideo();
     event.target.mute();
   }
-  
 }
 
 export default App;
