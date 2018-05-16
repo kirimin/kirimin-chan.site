@@ -109,9 +109,10 @@ class App extends Component {
           <hr/>
           <div className="LinksContainer">
             <a className="LinksButton" href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w">きりみんちゃんねる(Youtube)</a>
-            <a className="LinksButton" href="https://marshmallow-qa.com/kirimin">マシュマロ(しつもん)</a>
+            <a className="LinksButton" href="https://twitter.com/kirimin">Twitter</a>
             <a className="LinksButton" href="https://www.pixiv.net/fanbox/creator/13627594">FANBOX(ぶろぐ)</a>
-            <a className="LinksButton" href="https://twitter.com/kirimin">ついったー</a>
+            <a className="LinksButton" href="https://kirimin-chan.booth.pm/">きりみんちゃんねるしょっぷ</a>
+            <a className="LinksButton" href="https://marshmallow-qa.com/kirimin">マシュマロ(しつもん)</a>
           </div>
         </section>
         <section className="Gallery">

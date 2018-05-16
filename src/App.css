@@ -278,6 +278,7 @@ h1 {
   margin-right: 32px;
   margin-bottom: 32px;
   border-radius: 8px;
+  box-shadow: 0.5px 0.5px 1px #AAA;
 }
 
 .IntroductionTableDescribe {
@@ -287,6 +288,7 @@ h1 {
   padding: 32px;
   margin-bottom: 32px;
   border-radius: 8px;
+  box-shadow: 0.5px 0.5px 1px #AAA;
 }
 
 .IntroductionTableText {
@@ -303,6 +305,7 @@ h1 {
   margin-right: 32px;
   margin-bottom: 32px;
   border-radius: 8px;
+  box-shadow: 0.5px 0.5px 1px #AAA;
 }
 
 .IntroductionTableRequest {
@@ -312,6 +315,7 @@ h1 {
   padding: 32px;
   margin-bottom: 32px;
   border-radius: 8px;
+  box-shadow: 0.5px 0.5px 1px #AAA;
 }
 
 .Video {
@@ -333,6 +337,7 @@ h1 {
   background-color: #EFEBE9;
   padding: 32px;
   border-radius: 8px;
+  box-shadow: 0.5px 0.5px 1px #AAA;
 }
 
 .VideoCardTitle {
