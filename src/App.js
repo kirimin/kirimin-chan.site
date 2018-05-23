@@ -51,8 +51,8 @@ class App extends Component {
             <div className="HeaderContainer">
               <p className="HeaderText1">Virtual<br/>　Little girl<br/>　　Programmer</p>
               <div className="FloatingButtons">
-                <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="HeaderChannelButton">きりみんちゃんねるへ</a>
-                <a href='https://twitter.com/intent/tweet?text=きりみんちゃん.site&url=https://kirimin-chan.site/&hashtags=きりみんちゃんねる' className="HeaderShereButton">ついーとする</a>
+                <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="HeaderChannelButton" onclick="ga('send', 'event', 'link', 'click', 'HeaderChannelButton')">きりみんちゃんねるへ</a>
+                <a href='https://twitter.com/intent/tweet?text=きりみんちゃん.site&url=https://kirimin-chan.site/&hashtags=きりみんちゃんねる' className="HeaderShereButton" onclick="ga('send', 'event', 'link', 'click', 'HeaderShereButton')">ついーとする</a>
               </div>
               <div className='HeaderOpImage1Cover' />
               <img className='HeaderOpImage1' src={op1}/>
@@ -68,7 +68,7 @@ class App extends Component {
         <section className="Movie">
           <div className="MovieYoutube">
             <YouTube className="MovieYoutubeFrame"
-              videoId="bGTEriE9zu0"
+              videoId="xOvEpXWt70Y"
               opts={youtubeOpts}
               onReady={this._onReady}
             />
@@ -79,7 +79,7 @@ class App extends Component {
           <hr/>
           <div className="IntroductionContents">
             <div className="IntroductionTableProfile">
-              <p className="IntroductionTableText">なまえ　　：きりみん</p>
+              <p className="IntroductionTableText">なまえ　　：きりみんちゃん</p>
               <p className="IntroductionTableText">ねんれい　：７さい</p>
               <p className="IntroductionTableText">しんちょう：１１９cm</p>
               <p className="IntroductionTableText">たいじゅう：２２kg</p>
@@ -88,7 +88,6 @@ class App extends Component {
             <div className="IntroductionTableDescribe">
               <p className="IntroductionTableText">きりみんちゃんはバーチャル幼女プログラマーです。VTuberとしてバーチャルLTやライブコーディングなど、ギークな動画を発信していくよ。</p>
             </div>
-            <img className='IntroductionSD' src={sd} />
             <div className="IntroductionTableHashTag">
               <p className="IntroductionTableText">きりみんちゃんに関する話題は<a href='https://twitter.com/search?q=%23%E3%81%8D%E3%82%8A%E3%81%BF%E3%82%93%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8B&src=typd'>#きりみんちゃんねる</a>、ファンアートなど二次創作は<a href='https://twitter.com/search?q=%23kirimin_tech&src=typd'>#kirimin_tech</a>でツイートしてくれるとうれしいです！</p>
             </div>
@@ -97,22 +96,22 @@ class App extends Component {
             </div>
           </div>
         </section>
+        <section className="Links">
+          <h1>りんく</h1>
+          <hr/>
+          <div className="LinksContainer">
+            <a className="LinksButton" href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" onclick="ga('send', 'event', 'link', 'click', 'LinkChannnel')">きりみんちゃんねる(Youtube)</a>
+            <a className="LinksButton" href="https://twitter.com/kirimin" onclick="ga('send', 'event', 'link', 'click', 'LinkTwitter')">Twitter</a>
+            <a className="LinksButton" href="https://www.pixiv.net/fanbox/creator/13627594"  onclick="ga('send', 'event', 'link', 'click', 'LinkFANBOX')">FANBOX(ぶろぐ)</a>
+            <a className="LinksButton" href="https://kirimin-chan.booth.pm/"  onclick="ga('send', 'event', 'link', 'click', 'LinkBOOTH')">きりみんちゃんねるしょっぷ</a>
+            <a className="LinksButton" href="https://marshmallow-qa.com/kirimin"  onclick="ga('send', 'event', 'link', 'click', 'LinkMarshmallow')">マシュマロ(しつもん)</a>
+          </div>
+        </section>
         <section className="Video">
           <h1>どうが</h1>
           <hr/>
           <div className="VideoContents">
             {videos}
-          </div>
-        </section>
-        <section className="Links">
-          <h1>りんく</h1>
-          <hr/>
-          <div className="LinksContainer">
-            <a className="LinksButton" href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w">きりみんちゃんねる(Youtube)</a>
-            <a className="LinksButton" href="https://twitter.com/kirimin">Twitter</a>
-            <a className="LinksButton" href="https://www.pixiv.net/fanbox/creator/13627594">FANBOX(ぶろぐ)</a>
-            <a className="LinksButton" href="https://kirimin-chan.booth.pm/">きりみんちゃんねるしょっぷ</a>
-            <a className="LinksButton" href="https://marshmallow-qa.com/kirimin">マシュマロ(しつもん)</a>
           </div>
         </section>
         <section className="Gallery">
@@ -149,6 +148,7 @@ class App extends Component {
           <hr/>
           <p className="ContactText">きりみんちゃんに関するお問い合わせは、minkarakirimade@gmail.comか、Twitterで@kiriminにリプライやDMしてください。</p>
         </section>
+        <img className='IntroductionSD' src={sd} />
       </div>
     );
   }

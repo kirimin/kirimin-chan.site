@@ -262,8 +262,9 @@ h1 {
 
 .IntroductionSD {
   width: auto;
-  height: 320px;
+  height: 360px;
   transition: all 200ms 0s ease;
+  margin-bottom: 32px;
 }
 
 .IntroductionSD:hover {
@@ -410,7 +411,7 @@ h1 {
   margin-top: 32px;
   color: #5D4037;
   font-size: 1.2rem;
-  margin-bottom: 80px; 
+  margin-bottom: 32px; 
 }
 
 @media screen and (max-width: 480px) { /* smart phones */
