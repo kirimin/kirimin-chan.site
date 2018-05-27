@@ -100,11 +100,11 @@ class App extends Component {
           <h1>りんく</h1>
           <hr/>
           <div className="LinksContainer">
-            <a className="LinksButton" href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" onclick="ga('send', 'event', 'link', 'click', 'LinkChannnel')">きりみんちゃんねる(Youtube)</a>
-            <a className="LinksButton" href="https://twitter.com/kirimin" onclick="ga('send', 'event', 'link', 'click', 'LinkTwitter')">Twitter</a>
-            <a className="LinksButton" href="https://www.pixiv.net/fanbox/creator/13627594"  onclick="ga('send', 'event', 'link', 'click', 'LinkFANBOX')">FANBOX(ぶろぐ)</a>
-            <a className="LinksButton" href="https://kirimin-chan.booth.pm/"  onclick="ga('send', 'event', 'link', 'click', 'LinkBOOTH')">きりみんちゃんねるしょっぷ</a>
-            <a className="LinksButton" href="https://marshmallow-qa.com/kirimin"  onclick="ga('send', 'event', 'link', 'click', 'LinkMarshmallow')">マシュマロ(しつもん)</a>
+            <a className="LinksButton" href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" onclick="ga('send', 'event', 'link', 'click', 'LinkChannnel')"><i class="fa fa-tv" aria-hidden="true"></i>きりみんちゃんねる(Youtube)</a>
+            <a className="LinksButton" href="https://twitter.com/kirimin" onclick="ga('send', 'event', 'link', 'click', 'LinkTwitter')"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a>
+            <a className="LinksButton" href="https://www.pixiv.net/fanbox/creator/13627594"  onclick="ga('send', 'event', 'link', 'click', 'LinkFANBOX')"><i class="fa fa-pencil" aria-hidden="true"></i>FANBOX(ぶろぐ)</a>
+            <a className="LinksButton" href="https://kirimin-chan.booth.pm/"  onclick="ga('send', 'event', 'link', 'click', 'LinkBOOTH')"><i class="fa fa-list-alt" aria-hidden="true"></i>きりみんちゃんねるしょっぷ</a>
+            <a className="LinksButton" href="https://marshmallow-qa.com/kirimin"  onclick="ga('send', 'event', 'link', 'click', 'LinkMarshmallow')"><i class="fa fa-question" aria-hidden="true"></i>マシュマロ(しつもん)</a>
           </div>
         </section>
         <section className="Video">

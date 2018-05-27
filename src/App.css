@@ -272,7 +272,7 @@ h1 {
 }
 
 .IntroductionTableProfile {
-  width: 360px;
+  width: 380px;
   height: 320px;
   background-color: #E1F5FE;
   padding: 32px;
@@ -288,6 +288,7 @@ h1 {
   background-color: #FCE4EC;
   padding: 32px;
   margin-bottom: 32px;
+  margin-right: 32px;
   border-radius: 8px;
   box-shadow: 0.5px 0.5px 1px #AAA;
 }
@@ -310,7 +311,7 @@ h1 {
 }
 
 .IntroductionTableRequest {
-  width: 360px;
+  width: 380px;
   height: 320px;
   background-color: #FCE4EC;
   padding: 32px;
@@ -350,6 +351,11 @@ h1 {
 .Links {
   margin-left: 64px;
   margin-right: 64px;
+}
+
+.Links i {
+  margin-right: 10px;
+  font-size: 22px;
 }
 
 .LinksContainer {
