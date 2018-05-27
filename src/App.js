@@ -121,6 +121,8 @@ class App extends Component {
           <div className="GalleryContainer">
             <img src="./gallery/lgtm1.png"/>
             <img src="./gallery/lgtm2.png"/>
+            <img src="./gallery/lgtm3.png"/>
+            <img src="./gallery/lgtm4.png"/>
             <img src="./gallery/teigi_taisha.jpg"/>
             <img src="./gallery/i_think_so_too.jpg"/>
           </div>
@@ -154,7 +156,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUqN87Ye4TNLB04EFhxJ0L5w&maxResults=6&key=AIzaSyC0FXYDHyJJMA5D8eSbhISejSknJq_EXOI")
+    fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUqN87Ye4TNLB04EFhxJ0L5w&maxResults=8&key=AIzaSyC0FXYDHyJJMA5D8eSbhISejSknJq_EXOI")
       .then(results => {
         return results.json()
       }).then(data => {
