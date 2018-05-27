@@ -143,6 +143,7 @@ class App extends Component {
             <li className="LicenseHeaderText">特定の宗教、政治などの思想に関わる情報発信にキャラクターを使用すること</li>
             <li className="LicenseHeaderText">他人を誹謗中傷する目的でキャラクター使用すること</li>
             <li className="LicenseHeaderText">著しく暴力的、反社会的な内容、またはゾーニングへの配慮がないキャラクターの使用</li>
+            <li className="LicenseHeaderText">公式の素材を使ったグッズの販売や公式と誤解されるようなグッズの販売</li>
           </ul>
         </section>
         <section className="Contact">
