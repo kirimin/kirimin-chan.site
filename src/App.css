@@ -39,8 +39,14 @@ h1 {
   animation: headerTitleAnimation 1.5s ease 2s forwards;
 }
 @keyframes headerTitleAnimation {
-  0% {opacity: 0}
-  100% {opacity: 1}
+  0% {
+    opacity: 0;
+    transform: translateY(100%)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%)
+  }
 }
 
 .HeaderText1 {
@@ -57,9 +63,15 @@ h1 {
   z-index: 3;
 }
 @keyframes headerText1Animation {
-  30% {opacity: 1}
-  60% {opacity: 1}
-  100% {opacity: 0}
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .HeaderText2 {
@@ -193,6 +205,28 @@ h1 {
   100% {
     opacity: 1;
     transform: translateX(-100%)
+  }
+}
+
+.HeaderImageLogo {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  top: 25%;
+  left: 0;
+  right: 60%;
+  margin: auto;
+  opacity: 0;
+  z-index: 0;
+  animation: HeaderImageLogoAnimation 1.5s ease 8s forwards;
+}
+@keyframes HeaderImageLogoAnimation {
+  0% {opacity: 0;
+    transform: translateX(10%)
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%)
   }
 }
 

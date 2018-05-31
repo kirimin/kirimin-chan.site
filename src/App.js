@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 
 import header from './assets/header_image.png';
+import logo from './assets/kirimin_chsolologo.png'
 import op1 from './assets/op_image1.png'
-import op2 from './assets/op_image2.png'
+import op2 from './assets/op_image4.png'
 import op3 from './assets/op_image3.png'
 import sd from './assets/sd.png'
 import './App.css';
@@ -62,6 +63,7 @@ class App extends Component {
               <img className='HeaderOpImage3' src={op3}/>
               <div className='HeaderImageCover' />
               <img className='HeaderImage' src={header} />
+              <img className='HeaderImageLogo' src={logo} />
             </div>
           </header>
         </section>
@@ -121,8 +123,8 @@ class App extends Component {
           <div className="GalleryContainer">
             <img src="./gallery/lgtm1.png"/>
             <img src="./gallery/lgtm2.png"/>
-            <img src="./gallery/lgtm3.png"/>
             <img src="./gallery/lgtm4.png"/>
+            <img src="./gallery/lgtm3.png"/>
             <img src="./gallery/teigi_taisha.jpg"/>
             <img src="./gallery/i_think_so_too.jpg"/>
           </div>
@@ -157,7 +159,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUqN87Ye4TNLB04EFhxJ0L5w&maxResults=8&key=AIzaSyC0FXYDHyJJMA5D8eSbhISejSknJq_EXOI")
+    fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUqN87Ye4TNLB04EFhxJ0L5w&maxResults=5&key=AIzaSyC0FXYDHyJJMA5D8eSbhISejSknJq_EXOI")
       .then(results => {
         return results.json()
       }).then(data => {
