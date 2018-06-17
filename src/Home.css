@@ -1,4 +1,4 @@
-.App {}
+.Home {}
 
 hr {
   height: 3px;
@@ -235,7 +235,8 @@ h1 {
   flex-flow: column;
   position: absolute;
   width: fit-content;
-  top: 10%;
+  margin-top: 100px;
+  top: 0%;
   right: 0%;
   margin-right: 16px;
   z-index: 2;
@@ -267,6 +268,43 @@ h1 {
   font-size: 1.4rem;
   text-decoration: none;
   opacity: 0.2;
+}
+
+.Menu {
+  display: flex;
+  position: absolute;
+  width: fit-content;
+  top: 0%;
+  right: 0%;
+}
+
+.MenuItemButton {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px #F48FB1;
+  background-color: #F48FB1;
+  padding: 10px 10px;
+  color: #ffffff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  animation: MenuItemButtonAnimation 1ms ease 7.5s forwards;
+  opacity: 0;
+}
+
+.MenuItemButton:hover {
+  background-color: rgb(255, 54, 121);
+}
+
+@keyframes MenuItemButtonAnimation {
+  0% {opacity: 0;
+    transform: translateX(10%)
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%)
+  }
 }
 
 .MovieYoutube {
@@ -473,6 +511,10 @@ h1 {
   .HeaderText1 {
     top: 30%;
     font-size: 1.5em;
+  }
+
+  .Menu {
+    opacity: 0;
   }
 
   .Introduction {
