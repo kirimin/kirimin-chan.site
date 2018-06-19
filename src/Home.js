@@ -50,7 +50,8 @@ export class Home extends Component {
       <div className="App">
          <section>
           <header className="Header">
-            <h1 className="HeaderTitle">Hello, kirimin-chan</h1>
+            <HashLink className="MenuItemHomeButton" smooth to="/#top">▲</HashLink>
+            <h1 className="HeaderTitle" id="top">Hello, kirimin-chan</h1>
             <div className="HeaderContainer">
               <p className="HeaderText1">Virtual<br/>　Little girl<br/>　　Programmer</p>
               <div className="FloatingButtons">
@@ -67,12 +68,11 @@ export class Home extends Component {
               <img className='HeaderImage' src={header} />
               <img className='HeaderImageLogo' src={logo} />
               <div className='Menu'>
-                <HashLink className="MenuItemButton" to="/#introduction">じこしょうかい</HashLink>
-                <HashLink className="MenuItemButton" to="/#video">どうが</HashLink>
-                <HashLink className="MenuItemButton" to="/#gallery">ぎゃらりー</HashLink>
-                <HashLink className="MenuItemButton" to="/#license">らいせんす</HashLink>
-                <HashLink className="MenuItemButton" to="/links">りんく</HashLink>
-                <Link className="MenuItemButton" to="/#contact">おといあわせ</Link>
+                <HashLink className="MenuItemButton" smooth to="/#introduction">じこしょうかい</HashLink>
+                <HashLink className="MenuItemButton" smooth to="/#video">どうが</HashLink>
+                <HashLink className="MenuItemButton" smooth to="/#gallery">ぎゃらりー</HashLink>
+                <HashLink className="MenuItemButton" smooth to="/#license">らいせんす</HashLink>
+                <HashLink className="MenuItemButton" smooth to="/#contact">おといあわせ</HashLink>
               </div>
             </div>
           </header>
