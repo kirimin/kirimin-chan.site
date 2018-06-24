@@ -1,0 +1,22 @@
+.container {
+    margin: 32px;
+}
+
+.board_table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.board td {
+    background-color: green;
+    font-size: 30px;
+    width: 2em;
+    height: 2em;
+}
+.board td span {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    margin: 0.25em;
+}

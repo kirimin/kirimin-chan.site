@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react'
 
 const Links = () => (
@@ -7,4 +9,4 @@ const Links = () => (
     </div>
   )
 
-  export default Links
+export default Links
