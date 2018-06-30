@@ -1,14 +1,25 @@
 import React, { Component } from 'react'
 import './Osero.css';
+import kirimin_chan1 from './assets/kirimin-chan-1.png'
+import kirimin_chan2 from './assets/kirimin-chan-2.png'
+import kirimin_chan3 from './assets/kirimin-chan-3.png'
+import kirimin_chan_thinking from './assets/kirimin-chan-thinking.png'
+import black_stone from './assets/kirimi_black.png'
+import white_stone from './assets/kirimi_white.png'
 
 export default class Osero extends Component {
+
+  EMPTY_PLACE = 0
+  PLAYER_BLACK = 1
+  PLAYER_WHITE = 2
 
   constructor() {
     super()
     this.state = {
       onGame: false,
+      inThinking: false,
       finishGame: false,
-      player: 1,
+      player: this.PLAYER_BLACK,
       board : [[0, 0, 0, 0, 0, 0, 0, 0], 
               [0, 0, 0, 0, 0, 0, 0, 0], 
               [0, 0, 0, 0, 0, 0, 0, 0], 
@@ -24,21 +35,33 @@ export default class Osero extends Component {
     return (
     <div className="container">
       <h1>きりみんちゃんとオセロげーむ！</h1>
-      <h2>{`${this._getCurrentPlayerName()}のターン！`}</h2>
-      <table className="board">
-        {this._initBoard()}
-      </table>
+      <h2 className="turnText">{`${this._getCurrentPlayerName()}のターン！`}</h2>
+      <div className="boardContainer">
+        <table className="board">
+          {this._initBoard()}
+        </table>
+        <img className='kiriminChan' src={this.state.inThinking ? kirimin_chan_thinking : kirimin_chan3}/>
+      </div>
     </div>
     )
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.finishGame) {
-      alert('ゲーム終了！　黒：' + this._countStones(1) + ', 白：' + this._countStones(2));
+  async componentDidUpdate(prevProps, prevState) {
+    // きりみんちゃんのターン
+    if (this.state.player === this.PLAYER_WHITE && !this.state.inThinking) {
+      for(var i = 0; i < 8; i++){
+        for (var j = 0; j < 8; j++) {
+          if (this._canPutStone(i, j)) {
+            this._onClickPlace(i, j)
+            return
+          }
+        }
+      }
       return
     }
-    if (!this._canNext()) {
-      this.setState({finishGame: true})
+    if (!this._canNext() && !this.state.inThinking) {
+      alert('ゲーム終了！　黒：' + this._countStones(this.PLAYER_BLACK) + ', 白：' + this._countStones(this.PLAYER_WHITE));
+      return
     }
   }
 
@@ -48,17 +71,22 @@ export default class Osero extends Component {
     for(var i = 0; i < 8; i++){
       const tdList = []
       for (var j = 0; j < 8; j++) {
-        tdList.push(<td key={i + ',' + j} onClick={this._onClickSquare.bind(this, j, i)}>{this._getStoneState(j, i)}</td>);
+        tdList.push(<td key={i + ',' + j} onClick={this._onClickPlace.bind(this, j, i)}>{this._getStoneState(j, i)}</td>);
       }
       trList.push(<tr key={'tr' + i}>{tdList}</tr>)
     }
     return trList
   }
 
-  _onClickSquare(x, y) {
+  async _onClickPlace(x, y) {
     // 石がおけるか
     if (!this._canPutStone(x, y)) {
       return
+    }
+    if (this.state.player === this.PLAYER_WHITE) {
+      // なやむ
+      this.setState({ inThinking: true})
+      await this._sleep(1000)
     }
     // 石を置く
     this._putStone(x, y)
@@ -67,6 +95,7 @@ export default class Osero extends Component {
 
     // ターン変更
     this.setState({player: this._getOtherPlayer()})
+    this.setState({ inThinking: false})
   }
 
   _putStone(x, y) {
@@ -76,15 +105,15 @@ export default class Osero extends Component {
   }
 
   _getStoneState(x, y) {
-    return this.state.board[x][y] === 0 ? '　' : this.state.board[x][y] === 1 ? '●' + x + y : '◯' + x + y
+    return this.state.board[x][y] === this.EMPTY_PLACE ? <span/> : this.state.board[x][y] === this.PLAYER_BLACK ? <span className="black"/> : <span className="white"/>
   }
 
   _getOtherPlayer() {
-    return this.state.player === 1 ? 2 : 1
+    return this.state.player === this.PLAYER_BLACK ? this.PLAYER_WHITE : this.PLAYER_BLACK
   }
 
   _getCurrentPlayerName() {
-    return this.state.player === 1 ? '黒' : '白'
+    return this.state.player === this.PLAYER_BLACK ? '黒' : '白'
   }
 
   _canNext() {
@@ -114,19 +143,19 @@ export default class Osero extends Component {
     if (this.state.board[x][y] !== 0) {
       return false
     }
-    if (this._getCanChangeSquareList(x, y).length === 0) {
+    if (this._getCanChangePlaceList(x, y).length === 0) {
       return false
     }
     return true
   }
 
   _reverseStones(x, y) {
-    this._getCanChangeSquareList(x, y).map(it => {
+    this._getCanChangePlaceList(x, y).map(it => {
       this._putStone(it.x, it.y)
     })
   }
 
-  _getCanChangeSquareList(x, y) {
+  _getCanChangePlaceList(x, y) {
     return this._searchChangePlacesRight(x, y, this.state.player)
     .concat(this._searchChangePlacesLeft(x, y, this.state.player))
     .concat(this._searchChangePlacesBottom(x, y, this.state.player))
@@ -195,5 +224,13 @@ export default class Osero extends Component {
       changePlaceList.push({x: x, y: i})
     };
     return [];
+  }
+
+  _sleep(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve();
+        }, time);
+    });
   }
 }
