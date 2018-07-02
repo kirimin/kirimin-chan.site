@@ -17,7 +17,7 @@ export default class OseroGame extends Component {
     super()
     this.state = {
       inThinking: false,
-      finishGame: false,
+      isGameFinish: false,
       player: this.PLAYER_BLACK,
       board : [[0, 0, 0, 0, 0, 0, 0, 0], 
               [0, 0, 0, 0, 0, 0, 0, 0], 
@@ -47,15 +47,23 @@ export default class OseroGame extends Component {
   }
 
   async componentDidUpdate(prevProps, prevState) {
-    if (!this._canNext() && !this.state.inThinking) {
-      alert('ゲーム終了！　黒：' + this._countStones(this.PLAYER_BLACK) + ', 白：' + this._countStones(this.PLAYER_WHITE));
+    if (!this._canNext(this.state.player) && !this.state.inThinking) {
+      if (!this._canNext(this._getOtherPlayer()) && !this.state.inThinking) {
+        await this._sleep(100)
+        alert('ゲーム終了！　黒：' + this._countStones(this.PLAYER_BLACK) + ', 白：' + this._countStones(this.PLAYER_WHITE));
+        this.setState( {isGameFinish : true })
+        return
+      }
+      await this._sleep(100)
+      alert(this._getCurrentPlayerName() + 'は打てる手がないのでパスします。')
+      this.setState({ player: this._getOtherPlayer() })
       return
     }
     // きりみんちゃんのターン
     if (this.state.player === this.PLAYER_WHITE && !this.state.inThinking) {
       for(var i = 0; i < 8; i++){
         for (var j = 0; j < 8; j++) {
-          if (this._canPutStone(i, j)) {
+          if (this._canPutStone(i, j, this.state.player)) {
             this._onClickPlace(i, j)
             return
           }
@@ -65,23 +73,9 @@ export default class OseroGame extends Component {
     }
   }
 
-  _initBoard() {
-    var trList = [];
-  
-    for(var i = 0; i < 8; i++){
-      const tdList = []
-      for (var j = 0; j < 8; j++) {
-        tdList.push(<td key={i + ',' + j} onClick={this._onClickPlace.bind(this, j, i)}>{this._getStoneState(j, i)}</td>);
-      }
-      trList.push(<tr key={'tr' + i}>{tdList}</tr>)
-    }
-    return trList
-  }
-
   async _onClickPlace(x, y) {
-    console.log("test")
     // 石がおけるか
-    if (!this._canPutStone(x, y)) {
+    if (!this._canPutStone(x, y, this.state.player)) {
       return
     }
     if (this.state.player === this.PLAYER_WHITE) {
@@ -99,7 +93,20 @@ export default class OseroGame extends Component {
 
     // ターン変更
     this.setState({player: this._getOtherPlayer()})
-    this.setState({ inThinking: false})
+    this.setState({ inThinking: false })
+  }
+
+  _initBoard() {
+    var trList = [];
+  
+    for(var i = 0; i < 8; i++){
+      const tdList = []
+      for (var j = 0; j < 8; j++) {
+        tdList.push(<td key={i + ',' + j} onClick={this.state.inThinking ? null : this._onClickPlace.bind(this, j, i)}>{this._getStoneState(j, i)}</td>);
+      }
+      trList.push(<tr key={'tr' + i}>{tdList}</tr>)
+    }
+    return trList
   }
 
   _putStone(x, y) {
@@ -120,10 +127,10 @@ export default class OseroGame extends Component {
     return this.state.player === this.PLAYER_BLACK ? '黒' : '白'
   }
 
-  _canNext() {
+  _canNext(player) {
     for(var i = 0; i < 8; i++){
       for (var j = 0; j < 8; j++) {
-        if (this._canPutStone(i, j)) {
+        if (this._canPutStone(i, j, player)) {
           return true
         }
       }
@@ -143,96 +150,98 @@ export default class OseroGame extends Component {
     return count
   }
 
-  _canPutStone(x, y) {
+  _canPutStone(x, y, player) {
     if (this.state.board[x][y] !== 0) {
       return false
     }
-    if (this._getCanChangePlaceList(x, y).length === 0) {
+    if (this._getCanChangePlaceList(x, y, player).length === 0) {
       return false
     }
     return true
   }
 
   _reverseStones(x, y) {
-    this._getCanChangePlaceList(x, y).map(it => {
+    this._getCanChangePlaceList(x, y, this.state.player).map(it => {
       this._putStone(it.x, it.y)
     })
   }
 
-  _getCanChangePlaceList(x, y) {
-    return this._searchChangePlacesRight(x, y, this.state.player)
-    .concat(this._searchChangePlacesLeft(x, y, this.state.player))
-    .concat(this._searchChangePlacesBottom(x, y, this.state.player))
-    .concat(this._searchChangePlacesTop(x, y, this.state.player))
-    .concat(this._searchChangePlacesRightBottom(x, y, this.state.player))
-    .concat(this._searchChangePlacesLeftTop(x, y, this.state.player))
+  _getCanChangePlaceList(x, y, player) {
+    return this._searchChangePlacesRight(x, y, player)
+    .concat(this._searchChangePlacesLeft(x, y, player))
+    .concat(this._searchChangePlacesBottom(x, y, player))
+    .concat(this._searchChangePlacesTop(x, y, player))
+    .concat(this._searchChangePlacesRightBottom(x, y,player))
+    .concat(this._searchChangePlacesLeftTop(x, y, player))
+    .concat(this._searchChangePlacesRightTop(x, y, player))
+    .concat(this._searchChangePlacesLeftBottom(x, y, player))
   }
 
   _searchChangePlacesRight(x, y, color) {
-    const changePlaceList = [];
+    const changePlaceList = []
 
     for (var i = x + 1; i < 8; i++) {
       const tempColor = this.state.board[i][y]
       if (tempColor === 0) {
-        return [];
+        return []
       }
       if (tempColor === color) {
-        return changePlaceList;
+        return changePlaceList
       }
       changePlaceList.push({x: i, y: y})
     };
-    return [];
+    return []
   }
 
   _searchChangePlacesLeft(x, y, color) {
-    const changePlaceList = [];
+    const changePlaceList = []
 
     for (var i = x - 1; i >= 0; i--) {
       const tempColor = this.state.board[i][y]
       if (tempColor === 0) {
-        return [];
+        return []
       }
       if (tempColor === color) {
         return changePlaceList;
       }
       changePlaceList.push({x: i, y: y})
     };
-    return [];
+    return []
   }
 
   _searchChangePlacesBottom(x, y, color) {
-    const changePlaceList = [];
+    const changePlaceList = []
     for (var i = y + 1; i < 8; i++) {
       const tempColor = this.state.board[x][i]
       if (tempColor === 0) {
-        return [];
+        return []
       }
       if (tempColor === color) {
         return changePlaceList;
       }
       changePlaceList.push({x: x, y: i})
-    };
-    return [];
+    }
+    return []
   }
 
   _searchChangePlacesTop(x, y, color) {
-    const changePlaceList = [];
+    const changePlaceList = []
 
     for (var i = y - 1; i >= 0; i--) {
       const tempColor = this.state.board[x][i]
       if (tempColor === 0) {
-        return [];
+        return []
       }
       if (tempColor === color) {
-        return changePlaceList;
+        return changePlaceList
       }
       changePlaceList.push({x: x, y: i})
     };
-    return [];
+    return []
   }
 
   _searchChangePlacesRightBottom(x, y, color) {
-    const changePlaceList = [];
+    const changePlaceList = []
     while (true) {
       x++
       y++
@@ -241,10 +250,10 @@ export default class OseroGame extends Component {
       }
       const tempColor = this.state.board[x][y]
       if (tempColor === 0 || !tempColor) {
-          return [];
+          return []
       }
       if (tempColor === color) {
-          return changePlaceList;
+          return changePlaceList
       }
       changePlaceList.push({x: x, y: y})
     }
@@ -260,15 +269,55 @@ export default class OseroGame extends Component {
       }
       const tempColor = this.state.board[x][y]
       if (tempColor === 0 || !tempColor) {
-          return [];
+          return []
       }
       if (tempColor === color) {
-          return changePlaceList;
+          return changePlaceList
       }
       changePlaceList.push({x: x, y: y})
     }
     return [];
-}
+  }
+
+  _searchChangePlacesRightTop(x, y, color) {
+    const changePlaceList = [];
+    while (true) {
+      x++
+      y--
+      if (x >= 8 || y < 0) {
+        return []
+      }
+      const tempColor = this.state.board[x][y]
+      if (tempColor === 0 || !tempColor) {
+          return [];
+      }
+      if (tempColor === color) {
+          return changePlaceList
+      }
+      changePlaceList.push({x: x, y: y})
+    }
+    return [];
+  }
+
+  _searchChangePlacesLeftBottom(x, y, color) {
+    const changePlaceList = [];
+    while (true) {
+      x--
+      y++
+      if (x < 0 || y >= 8) {
+        return []
+      }
+      const tempColor = this.state.board[x][y]
+      if (tempColor === 0 || !tempColor) {
+          return [];
+      }
+      if (tempColor === color) {
+          return changePlaceList
+      }
+      changePlaceList.push({x: x, y: y})
+    }
+    return [];
+  }
 
   _sleep(time) {
     return new Promise((resolve, reject) => {
