@@ -1,0 +1,49 @@
+h1 {
+    padding-top: 0;
+}
+.container {
+    margin: 64px;
+}
+
+.turnText {
+    margin-top: 36px;
+}
+
+.board {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.board td {
+    background-color: #03A9F4;
+    font-size: 30px;
+    width: 2em;
+    height: 2em;
+}
+.board td span {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    margin: 0.25em;
+}
+
+.black {
+    background-color: black
+}
+
+.white {
+    background-color: white
+}
+
+.boardContainer {
+    display: flex;
+    flex-flow: row;
+}
+.kiriminChan {
+    margin-top: -80px;
+    width: 500px;
+    height: 800px;
+    text-align: left;
+    object-fit: contain;
+}
