@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
+import Modal from 'react-modal'
 import './OseroGame.css';
-import kirimin_chan1 from './assets/kirimin-chan-1.png'
-import kirimin_chan2 from './assets/kirimin-chan-2.png'
-import kirimin_chan3 from './assets/kirimin-chan-3.png'
+import kirimin_chan_normal from './assets/kirimin-chan-normal.png'
+import kirimin_chan_down from './assets/kirimin-chan-down.png'
+import kirimin_chan_smile from './assets/kirimin-chan-smile.png'
 import kirimin_chan_lose from './assets/kirimin-chan-lose.png'
 import kirimin_chan_thinking from './assets/kirimin-chan-thinking.png'
 import put_se from './assets/put.mp3'
 
 export default class OseroGame extends Component {
+
+  YOWAYOWA = "よわよわ"
+  TSUYOTSUYO = "つよつよ"
 
   EMPTY_PLACE = 0
   PLAYER_BLACK = 1
@@ -16,6 +20,7 @@ export default class OseroGame extends Component {
   constructor() {
     super()
     this.state = {
+      modalIsOpen: false,
       inThinking: false,
       isGameFinish: false,
       player: this.PLAYER_BLACK,
@@ -28,11 +33,29 @@ export default class OseroGame extends Component {
               [0, 0, 0, 0, 0, 0, 0, 0], 
               [0, 0, 0, 0, 0, 0, 0, 0]],
     }
+    this.openModal = this.openModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
   }
 
   render() {
-    const score = this._countStones(this.PLAYER_WHITE) - this._countStones(this.PLAYER_BLACK)
-    const kirimin_chan = score > 0 ? kirimin_chan1 : score > -5 ? kirimin_chan3 : kirimin_chan_lose
+    const level = this.props.level
+    const blackCount = this._countStones(this.PLAYER_BLACK)
+    const whiteCount = this._countStones(this.PLAYER_WHITE)
+    const score = whiteCount - blackCount
+    let kirimin_chan
+    if (score > 0) {
+      kirimin_chan = kirimin_chan_smile
+    } else if (score > -4) {
+      kirimin_chan = kirimin_chan_normal
+    } else if (score > - 8){
+      kirimin_chan = kirimin_chan_down
+    } else {
+      kirimin_chan = kirimin_chan_lose
+    }
+    const endText = score < 0 ? `${blackCount}:${whiteCount}であなたの勝ちだよ！おめでとう！！！` : 
+      `${blackCount}:${whiteCount}できりみんちゃんの勝ちだよ！また挑戦してね！`
+      const shareText = score < 0 ? `${blackCount}:${whiteCount}で${level}きりみんちゃんに勝ちました！！！` : 
+      `${blackCount}:${whiteCount}で${level}きりみんちゃんに負けました...`
     return (
     <div className="container">
       <h2 className="turnText">{`${this._getCurrentPlayerName()}のターン！`}</h2>
@@ -42,15 +65,31 @@ export default class OseroGame extends Component {
         </table>
         <img className='kiriminChan' src={this.state.inThinking ? kirimin_chan_thinking : kirimin_chan}/>
       </div>
+      <div className="backButton" >
+        <a onClick={this.props.onClickBack}>タイトルにもどる</a>
+      </div>
+      <Modal
+        className="Modal"
+        overlayClassName="Overlay"
+        isOpen={this.state.modalIsOpen}
+        onAfterOpen={this.afterOpenModal}
+        onRequestClose={this.closeModal}
+      >
+        <h2>ゲーム終了！</h2>
+        <div>{endText}</div>
+        <p><a href={'https://twitter.com/intent/tweet?text=' + shareText + ' &url=https://kirimin-chan.site/games/osero&hashtags=きりみんちゃんねる'} target="_blank">ついーとする！</a></p>
+        <p onClick={this.closeModal}>とじる</p>
+      </Modal>
     </div>
     )
   }
 
   async componentDidUpdate(prevProps, prevState) {
-    if (!this._canNext(this.state.player) && !this.state.inThinking) {
+    if (!this._canNext(this.state.player) && !this.state.inThinking && !this.state.isGameFinish) {
       if (!this._canNext(this._getOtherPlayer()) && !this.state.inThinking) {
         await this._sleep(100)
-        alert('ゲーム終了！　黒：' + this._countStones(this.PLAYER_BLACK) + ', 白：' + this._countStones(this.PLAYER_WHITE));
+        this.openModal()
+        // alert('ゲーム終了！　黒：' + this._countStones(this.PLAYER_BLACK) + ', 白：' + this._countStones(this.PLAYER_WHITE));
         this.setState( {isGameFinish : true })
         return
       }
@@ -61,16 +100,72 @@ export default class OseroGame extends Component {
     }
     // きりみんちゃんのターン
     if (this.state.player === this.PLAYER_WHITE && !this.state.inThinking) {
-      for(var i = 0; i < 8; i++){
-        for (var j = 0; j < 8; j++) {
-          if (this._canPutStone(i, j, this.state.player)) {
-            this._onClickPlace(i, j)
-            return
+      if (this.state.level === this.TSUYOTSUYO) {
+        this._tsuyotsuyoAI()
+      } else {
+        this._yowayowaAI()
+      }
+    }
+  }
+
+  _yowayowaAI() {
+    let max = {
+      score: 0,
+      place : { x: 0, y: 0 }
+    }
+    for(let i = 0; i < 8; i++){
+      for (let j = 0; j < 8; j++) {
+        if (this._canPutStone(i, j, this.state.player)) {
+          const score = this._getCanChangePlaceList(i, j, this.state.player).length
+          if (score >= max.score) {
+            max = {
+              score: score,
+              place: { x: i, y: j }
+            }
           }
         }
       }
-      return
     }
+    this._onClickPlace(max.place.x, max.place.y)
+  }
+
+  _tsuyotsuyoAI() {
+    const scoreMap = [
+      [30, -12, 0, -1, -1, 0, -12, 30],
+      [-12, -15, -3, -3, -3, -3, -15, -12],
+      [0, -3, 0, -1, -1, 0, -3, 0],
+      [-1, -3, -1, -1, -1, -1, -3, -1],
+      [-1, -3, -1, -1, -1, -1, -3, -1],
+      [0, -3, 0, -1, -1, 0, -3, 0],
+      [-12, -15, -3, -3, -3, -3, -15, -12],
+      [120, -20, 20, 5, 5, 20, -20, 120]
+    ];
+    let max = {
+      score: -100,
+      place : { x: 0, y: 0 }
+    }
+    for(var i = 0; i < 8; i++){
+      for (var j = 0; j < 8; j++) {
+        if (this._canPutStone(i, j, this.state.player)) {
+          const score = scoreMap[i][j]
+          if (score >= max.score) {
+            max = {
+              score: score,
+              place: { x: i, y: j }
+            }
+          }
+        }
+      }
+    }
+    this._onClickPlace(max.place.x, max.place.y)
+  }
+
+  openModal() {
+    this.setState({modalIsOpen: true})
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false})
   }
 
   async _onClickPlace(x, y) {
@@ -124,7 +219,7 @@ export default class OseroGame extends Component {
   }
 
   _getCurrentPlayerName() {
-    return this.state.player === this.PLAYER_BLACK ? '黒' : '白'
+    return this.state.player === this.PLAYER_BLACK ? 'あなた(黒)' : 'きりみんちゃん(白)'
   }
 
   _canNext(player) {

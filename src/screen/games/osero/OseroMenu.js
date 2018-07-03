@@ -1,28 +1,19 @@
 import React, { Component } from 'react'
 import OseroGame from './OseroGame'
-import './Osero.css';
+import './OseroMenu.css'
+import menuImage from './assets/menu_image.png'
 
 export default class OseroMenu extends Component {
-
-  EMPTY_PLACE = 0
-  PLAYER_BLACK = 1
-  PLAYER_WHITE = 2
-
-  constructor() {
-    super()
-    this.state = {
-      onGame: false,
-    }
-  }
 
   render() {
     return (
     <div>
       <div className="menuContainer">
-        <h2>レベル</h2>
-        <p className="buttonYowaYowa">よわよわ</p>
-        <p className="buttonTsuyoTsuyo">つよつよ</p>
+        <h2>はじめる</h2>
+        <a className="buttonYowaYowa" onClick={e => {this.props.onClickStart("よわよわ")}}>よわよわ</a>
+        <a className="buttonTsuyoTsuyo" onClick={e => {this.props.onClickStart("つよつよ")}}>つよつよ</a>
       </div>
+      <img className="menuImage" src={menuImage} />
     </div>
     )
   }
