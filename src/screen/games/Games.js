@@ -1,11 +1,13 @@
-// @flow
-
 import React, { Component } from 'react'
+import './Games.css'
 
 const Games = () => (
-    <div>
-      <h2>げーむす</h2>
-      <p>オセロゲーム</p>
+    <div className="gamesContainer">
+      <h1 >げーむす</h1>
+      <div>
+        <a href="https://kirimin-chan.site/games/osero">オセロゲーム</a>
+        <a href="https://kirimin-chan.site">もどる</a>
+      </div>
     </div>
   )
 

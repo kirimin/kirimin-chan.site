@@ -32,3 +32,22 @@
     position: absolute;
     z-index: -1;
 }
+
+.buttonBack {
+    position: absolute;
+    bottom: 5%;
+    margin: 32px;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 480px) { /* smart phones */
+
+    .menuImage {
+        top: 20%;
+        left: 15%;
+        width: 600px;
+        position: absolute;
+        z-index: -1;
+    }
+
+}

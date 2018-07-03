@@ -1,0 +1,24 @@
+.gamesContainer {
+    margin: 32px;
+}
+
+.gamesContainer h1 {
+    margin-bottom: 32px;
+}
+
+.gamesContainer a {
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px #888;
+    background-color: #03A9F4;
+    padding: 16px 24px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+gamesContainer. a:hover {
+    background-color: #B3E5FC
+}

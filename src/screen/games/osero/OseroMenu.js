@@ -14,6 +14,8 @@ export default class OseroMenu extends Component {
         <a className="buttonTsuyoTsuyo" onClick={e => {this.props.onClickStart("つよつよ")}}>つよつよ</a>
       </div>
       <img className="menuImage" src={menuImage} />
+
+      <a className="buttonBack" href="https://kirimin-chan.site">きりみんちゃん.siteにもどる</a>
     </div>
     )
   }

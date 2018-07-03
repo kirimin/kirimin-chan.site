@@ -1,12 +1,13 @@
-h1 {
-    padding-top: 0;
-}
-h2 {
-    margin-top: 0;
-    font-size: 2em;
-}
 .container {
     margin-left: 32px;
+}
+
+.container h1 {
+    padding-top: 0;
+}
+.container h2 {
+    margin-top: 0;
+    font-size: 2em;
 }
 
 .turnText {
@@ -44,6 +45,7 @@ h2 {
     display: flex;
     flex-flow: row;
 }
+
 .kiriminChan {
     margin-top: -80px;
     width: 500px;
@@ -120,4 +122,35 @@ h2 {
     bottom: 0;
     left: 0;
     background-color: rgba(0,0,0,.4);
+}
+
+@media screen and (max-width: 480px) { /* smart phones */
+
+    .container h2 {
+        width: 480px;
+        margin-top: 0;
+        font-size: 1.5em;
+    }
+
+    .board td {
+        font-size: 24px;
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .board td span {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .boardContainer {
+        display: flex;
+        flex-flow: column;
+    }    
+
+    .kiriminChan {
+        width: 200px;
+        height: 400px;
+        text-align: left;
+        object-fit: contain;
+    }
 }

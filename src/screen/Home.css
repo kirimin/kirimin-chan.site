@@ -1,6 +1,6 @@
 .Home {}
 
-hr {
+.Home hr {
   height: 3px;
   border: none;
   border-top: 3px #03A9F4 dashed;
@@ -15,7 +15,7 @@ hr {
   100% {background-color: #F48FB1}
 }
 
-h1 {
+.Home h1 {
   padding-top: 64px;
   color: #03A9F4;
   font-size: 3rem;
