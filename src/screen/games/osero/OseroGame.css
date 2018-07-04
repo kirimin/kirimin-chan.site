@@ -148,6 +148,7 @@
     }    
 
     .kiriminChan {
+        margin-top: 0px;
         width: 200px;
         height: 400px;
         text-align: left;
