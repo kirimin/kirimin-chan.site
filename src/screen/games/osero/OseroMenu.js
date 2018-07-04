@@ -11,7 +11,7 @@ export default class OseroMenu extends Component {
       <div className="menuContainer">
         <h2>はじめる</h2>
         <a className="buttonYowaYowa" onClick={e => {this.props.onClickStart("よわよわ")}}>よわよわ</a>
-        <a className="buttonTsuyoTsuyo" onClick={e => {this.props.onClickStart("つよつよ")}}>つよつよ</a>
+        <a className="buttonTsuyoTsuyo" onClick={e => {this.props.onClickStart("つよつよver2")}}>つよつよver2</a>
       </div>
       <img className="menuImage" src={menuImage} />
 

@@ -11,7 +11,7 @@ import put_se from './assets/put.mp3'
 export default class OseroGame extends Component {
 
   YOWAYOWA = "よわよわ"
-  TSUYOTSUYO = "つよつよ"
+  TSUYOTSUYO = "つよつよver2"
 
   EMPTY_PLACE = 0
   PLAYER_BLACK = 1
@@ -100,7 +100,7 @@ export default class OseroGame extends Component {
     }
     // きりみんちゃんのターン
     if (this.state.player === this.PLAYER_WHITE && !this.state.inThinking) {
-      if (this.state.level === this.TSUYOTSUYO) {
+      if (this.props.level === this.TSUYOTSUYO) {
         this._tsuyotsuyoAI()
       } else {
         this._yowayowaAI()
@@ -130,7 +130,7 @@ export default class OseroGame extends Component {
   }
 
   _tsuyotsuyoAI() {
-    const scoreMap = [
+    const scoreMap = this._countStones(this.EMPTY_PLACE) > 10 ? [
       [30, -12, 0, -1, -1, 0, -12, 30],
       [-12, -15, -3, -3, -3, -3, -15, -12],
       [0, -3, 0, -1, -1, 0, -3, 0],
@@ -138,8 +138,26 @@ export default class OseroGame extends Component {
       [-1, -3, -1, -1, -1, -1, -3, -1],
       [0, -3, 0, -1, -1, 0, -3, 0],
       [-12, -15, -3, -3, -3, -3, -15, -12],
-      [120, -20, 20, 5, 5, 20, -20, 120]
-    ];
+      [30, -12, 0, -1, -1, 0, -12, 30]] :
+      [
+      [0, -2, 0, -1, -1, 0, -2, -0],
+      [-2, -2, -1, -1, -1, -1, -2, -2],
+      [0, -1, 0, -1, -1, 0, -1, 0],
+      [-1, -1, -1, -1, -1, -1, -1, -1],
+      [-1, -1, -1, -1, -1, -1, -1, -1],
+      [0, -1, 0, -1, -1, 0, -1, 0],
+      [-2, -2, -1, -1, -1, -1, -2, -2],
+      [0, -2, 0, -1, -1, 0, -2, 0]]
+    ;
+    this._omomiAI(scoreMap)
+  }
+
+  _omomiAI(scoreMap) {
+    const sum  = function(arr) {
+      return arr.reduce(function(prev, current, i, arr) {
+          return prev+current;
+      });
+  };
     let max = {
       score: -100,
       place : { x: 0, y: 0 }
@@ -147,8 +165,9 @@ export default class OseroGame extends Component {
     for(var i = 0; i < 8; i++){
       for (var j = 0; j < 8; j++) {
         if (this._canPutStone(i, j, this.state.player)) {
-          const score = scoreMap[i][j]
-          if (score >= max.score) {
+          const places = this._getCanChangePlaceList(i, j, this.state.player).concat({x: i, y: j})
+          const score = sum(places.map(place => (scoreMap[place.x][place.y] )))
+          if (score > max.score) {
             max = {
               score: score,
               place: { x: i, y: j }
