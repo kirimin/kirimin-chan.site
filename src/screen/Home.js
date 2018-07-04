@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 import {HashLink} from 'react-router-hash-link'
 import YouTube from 'react-youtube';
 
-import header from './assets/header_image.png';
-import logo from './assets/kirimin_chsolologo.png'
-import op1 from './assets/op_image1.png'
-import op2 from './assets/op_image4.png'
-import op3 from './assets/op_image3.png'
-import sd from './assets/sd.png'
+import header from '../assets/header_image.png';
+import logo from '../assets/kirimin_chsolologo.png'
+import op1 from '../assets/op_image1.png'
+import op2 from '../assets/op_image4.png'
+import op3 from '../assets/op_image3.png'
+import sd from '../assets/sd.png'
 import './Home.css';
 
 export class Home extends Component {
@@ -70,9 +70,10 @@ export class Home extends Component {
               <div className='Menu'>
                 <HashLink className="MenuItemButton" smooth to="/#introduction">じこしょうかい</HashLink>
                 <HashLink className="MenuItemButton" smooth to="/#video">どうが</HashLink>
-                <HashLink className="MenuItemButton" smooth to="/#gallery">ぎゃらりー</HashLink>
                 <HashLink className="MenuItemButton" smooth to="/#license">らいせんす</HashLink>
                 <HashLink className="MenuItemButton" smooth to="/#contact">おといあわせ</HashLink>
+                <HashLink className="MenuItemButton" smooth to="/#gallery">ぎゃらりー</HashLink>
+                <Link className="MenuItemButton" smooth to="./games">げーむ</Link>
               </div>
             </div>
           </header>

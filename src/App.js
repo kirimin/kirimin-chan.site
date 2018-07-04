@@ -1,16 +1,20 @@
+// @flow
+
 import React, { Component } from 'react'
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
-import Home from './Home'
-import Links from './Links'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Home from './screen/Home'
+import Links from './screen/Links'
+import Games from './screen/games/Games'
+import Osero from './screen/games/osero/Osero'
 
 const App = () => (
   <BrowserRouter>
-    <div>
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/links' componet={Links} />
+      <Route exact path='/' component={Home} />
+        <Route exact path='/links' component={Links} />
+        <Route exact path='/games' component={Games} />
+        <Route exact path='/games/osero' component={Osero} />
       </Switch>
-    </div>
   </BrowserRouter>
 )
 
