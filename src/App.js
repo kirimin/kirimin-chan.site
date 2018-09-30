@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './screen/Home'
 import Links from './screen/Links'
 import Games from './screen/games/Games'
-import Osero from './screen/games/Osero'
+import Osero from './screen/games/osero/Osero'
 
 const App = () => (
   <BrowserRouter>

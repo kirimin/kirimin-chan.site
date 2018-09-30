@@ -70,9 +70,10 @@ export class Home extends Component {
               <div className='Menu'>
                 <HashLink className="MenuItemButton" smooth to="/#introduction">じこしょうかい</HashLink>
                 <HashLink className="MenuItemButton" smooth to="/#video">どうが</HashLink>
-                <HashLink className="MenuItemButton" smooth to="/#gallery">ぎゃらりー</HashLink>
                 <HashLink className="MenuItemButton" smooth to="/#license">らいせんす</HashLink>
                 <HashLink className="MenuItemButton" smooth to="/#contact">おといあわせ</HashLink>
+                <HashLink className="MenuItemButton" smooth to="/#gallery">ぎゃらりー</HashLink>
+                <Link className="MenuItemButton" smooth to="./games">げーむ</Link>
               </div>
             </div>
           </header>
