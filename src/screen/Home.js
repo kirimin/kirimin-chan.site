@@ -113,7 +113,7 @@ export class Home extends Component {
           <hr/>
           <div className="LinksContainer">
             <a className="LinksButton" href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" onclick="ga('send', 'event', 'link', 'click', 'LinkChannnel')"><i class="fa fa-tv" aria-hidden="true"></i>きりみんちゃんねる(Youtube)</a>
-            <a className="LinksButton" href="https://twitter.com/kirimin" onclick="ga('send', 'event', 'link', 'click', 'LinkTwitter')"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a>
+            <a className="LinksButton" href="https://twitter.com/kirimin_chan" onclick="ga('send', 'event', 'link', 'click', 'LinkTwitter')"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a>
             <a className="LinksButton" href="https://www.pixiv.net/fanbox/creator/13627594"  onclick="ga('send', 'event', 'link', 'click', 'LinkFANBOX')"><i class="fa fa-pencil" aria-hidden="true"></i>FANBOX(ぶろぐ)</a>
             <a className="LinksButton" href="https://kirimin-chan.booth.pm/"  onclick="ga('send', 'event', 'link', 'click', 'LinkBOOTH')"><i class="fa fa-list-alt" aria-hidden="true"></i>きりみんちゃんねるしょっぷ</a>
             <a className="LinksButton" href="https://marshmallow-qa.com/kirimin"  onclick="ga('send', 'event', 'link', 'click', 'LinkMarshmallow')"><i class="fa fa-question" aria-hidden="true"></i>マシュマロ(しつもん)</a>
@@ -161,7 +161,7 @@ export class Home extends Component {
         <section className="Contact" id="contact">
           <h1>おといあわせ</h1>
           <hr/>
-          <p className="ContactText">きりみんちゃんに関するお問い合わせは、minkarakirimade@gmail.comか、Twitterで@kiriminにリプライやDMしてください。</p>
+          <p className="ContactText">きりみんちゃんに関するお問い合わせは、minkarakirimade@gmail.comか、Twitterで@kirimin_chanにリプライやDMしてください。</p>
         </section>
         <img className='IntroductionSD' src={sd} />
       </div>
