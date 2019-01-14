@@ -81,7 +81,7 @@ export class Home extends Component {
         <section className="Movie">
           <div className="MovieYoutube">
             <YouTube className="MovieYoutubeFrame"
-              videoId="xOvEpXWt70Y"
+              videoId="XJlzT83Gs8o"
               opts={youtubeOpts}
               onReady={this._onReady}
             />
@@ -99,13 +99,16 @@ export class Home extends Component {
               <p className="IntroductionTableText">しゅみ　　：プログラミング、おえかき、ゲーム</p>
             </div>
             <div className="IntroductionTableDescribe">
-              <p className="IntroductionTableText">きりみんちゃんはバーチャル幼女プログラマーです。VTuberとしてバーチャルLTやライブコーディングなど、ギークな動画を発信していくよ。</p>
+              <p className="IntroductionTableText">きりみんちゃんはバーチャル幼女プログラマーです。声はおじさん。VTuberとしてライブコーディングや技術系の雑談など、ギークな動画を発信していくよ。</p>
             </div>
             <div className="IntroductionTableHashTag">
               <p className="IntroductionTableText">きりみんちゃんに関する話題は<a href='https://twitter.com/search?q=%23%E3%81%8D%E3%82%8A%E3%81%BF%E3%82%93%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8B&src=typd'>#きりみんちゃんねる</a>、ファンアートなど二次創作は<a href='https://twitter.com/search?q=%23kirimin_tech&src=typd'>#kirimin_tech</a>でツイートしてくれるとうれしいです！</p>
             </div>
             <div className="IntroductionTableRequest">
               <p className="IntroductionTableText">マシュマロでしつもん、リクエストを募集しているよ！プログラミングに関するしつもんなどを気軽に送ってくれたら、それをネタに動画をつくったりするよ。</p>
+            </div>
+            <div className="IntroductionTablePodcast">
+              <p className="IntroductionTableText">人生fmというポッドキャストもやってるよ！知り合いのエンジニアをゲストに呼んで人生について話してもらうポッドキャストです。<a href='https://jinseifm.life/'>人生fm</a></p>
             </div>
           </div>
         </section>
@@ -138,6 +141,7 @@ export class Home extends Component {
             <img src="./gallery/lgtm3.png"/>
             <img src="./gallery/teigi_taisha.jpg"/>
             <img src="./gallery/i_think_so_too.jpg"/>
+            <img src="./gallery/akachan.jpg"/>
           </div>
         </section>
         <section className="License" id="license">

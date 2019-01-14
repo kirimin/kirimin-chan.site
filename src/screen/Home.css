@@ -409,6 +409,16 @@
   box-shadow: 0.5px 0.5px 1px #AAA;
 }
 
+.IntroductionTablePodcast {
+  width: 380px;
+  height: 320px;
+  background-color: #E1F5FE;
+  padding: 32px;
+  margin-bottom: 32px;
+  border-radius: 8px;
+  box-shadow: 0.5px 0.5px 1px #AAA;
+}
+
 .Video {
   margin-left: 64px;
   margin-right: 64px;
