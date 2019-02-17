@@ -6,8 +6,8 @@ import YouTube from 'react-youtube';
 import header from '../assets/header_image.png';
 import logo from '../assets/kirimin_chsolologo.png'
 import op1 from '../assets/op_image1.png'
-import op2 from '../assets/op_image4.png'
-import op3 from '../assets/op_image3.png'
+import op2 from '../assets/op_image2.png'
+import op3 from '../assets/op_image4.png'
 import sd from '../assets/sd.png'
 import './Home.css';
 
@@ -81,7 +81,7 @@ export class Home extends Component {
         <section className="Movie">
           <div className="MovieYoutube">
             <YouTube className="MovieYoutubeFrame"
-              videoId="XJlzT83Gs8o"
+              videoId="ZhINFxFdISA"
               opts={youtubeOpts}
               onReady={this._onReady}
             />
