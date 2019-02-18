@@ -90,7 +90,9 @@ export class Home extends Component {
         <section className="Introduction" id="introduction">
           <h1 className="IntroductionTitle">じこしょうかい</h1>
           <hr/>
+          <h2>きりみんちゃん</h2>
           <div className="IntroductionContents">
+            <img className="IntroductionKiriminChan" src="./gallery/kirimin_chan.png"/>
             <div className="IntroductionTableProfile">
               <p className="IntroductionTableText">なまえ　　：きりみんちゃん</p>
               <p className="IntroductionTableText">ねんれい　：７さい</p>
@@ -99,9 +101,9 @@ export class Home extends Component {
               <p className="IntroductionTableText">しゅみ　　：プログラミング、おえかき、ゲーム</p>
             </div>
             <div className="IntroductionTableDescribe">
-              <p className="IntroductionTableText">きりみんちゃんはバーチャル幼女プログラマーです。声はおじさん。VTuberとしてライブコーディングや技術系の雑談など、ギークな動画を発信していくよ。</p>
+              <p className="IntroductionTableText">きりみんちゃんはバーチャル幼女プログラマーです。声はおじさん。VTuberとして技術系の動画の投稿や、ライブコーディングの配信などの活動を行っています。得意分野はAndroidアプリ開発。</p>
             </div>
-            <div className="IntroductionTableHashTag">
+            {/* <div className="IntroductionTableHashTag">
               <p className="IntroductionTableText">きりみんちゃんに関する話題は<a href='https://twitter.com/search?q=%23%E3%81%8D%E3%82%8A%E3%81%BF%E3%82%93%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8B&src=typd'>#きりみんちゃんねる</a>、ファンアートなど二次創作は<a href='https://twitter.com/search?q=%23kirimin_tech&src=typd'>#kirimin_tech</a>でツイートしてくれるとうれしいです！</p>
             </div>
             <div className="IntroductionTableRequest">
@@ -109,7 +111,7 @@ export class Home extends Component {
             </div>
             <div className="IntroductionTablePodcast">
               <p className="IntroductionTableText">人生fmというポッドキャストもやってるよ！知り合いのエンジニアをゲストに呼んで人生について話してもらうポッドキャストです。<a href='https://jinseifm.life/'>人生fm</a></p>
-            </div>
+            </div> */}
           </div>
         </section>
         <section className="Links">

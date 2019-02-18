@@ -18,7 +18,7 @@
 .Home h1 {
   padding-top: 64px;
   color: #03A9F4;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: "Kodomo"
 }
 
@@ -339,8 +339,14 @@
 }
 
 .Introduction {
+  margin-top: 32px;
   margin-left: 64px;
   margin-right: 64px;
+}
+
+.IntroductionKiriminChan {
+  width: 25%;
+  height: 25%;
 }
 
 .IntroductionContents {
