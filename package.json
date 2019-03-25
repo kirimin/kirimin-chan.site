@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "react-modal": "^3.4.5",
+    "npm": "^6.9.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-modal": "^3.8.1",
     "react-router-dom": "^4.3.1",
-    "react-router-hash-link": "^1.2.0",
-    "react-scripts": "1.1.4",
-    "react-youtube": "^7.5.0"
+    "react-router-hash-link": "^1.2.1",
+    "react-scripts": "^2.1.8",
+    "react-twitter-widgets": "^1.7.1",
+    "react-youtube": "^7.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -18,7 +20,13 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "material-ui": "^0.20.0",
-    "react-tap-event-plugin": "^3.0.2"
-  }
+    "material-ui": "^0.20.2",
+    "react-tap-event-plugin": "^3.0.3"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

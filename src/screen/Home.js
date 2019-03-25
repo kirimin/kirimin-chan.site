@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import {HashLink} from 'react-router-hash-link'
-import YouTube from 'react-youtube';
+import YouTube from 'react-youtube'
 
-import header from '../assets/header_image.png';
+import header from '../assets/header_image.png'
 import logo from '../assets/kirimin_chsolologo.png'
 import op1 from '../assets/op_image1.png'
 import op2 from '../assets/op_image2.png'
-import op3 from '../assets/op_image4.png'
-import sd from '../assets/sd.png'
+import op3 from '../assets/op_image3.png'
 import './Home.css';
 
 export class Home extends Component {
@@ -30,33 +29,36 @@ export class Home extends Component {
           loop:1,
         }
     };
-    const youtubeOpts2 = {
-      height: '195',
-      width: '320',
-        playerVars: {
-        }
-    };
-    const videos = this.state.currentVideoList.map( item => {
-      return (
-        <div className="VideoCard">
-          <YouTube className=""
-            videoId={item.snippet.resourceId.videoId}
-            opts={youtubeOpts2} />
-          <p className="VideoCardTitle">{item.snippet.title}</p>
-        </div>
-        )
-    })
+    // const youtubeOpts2 = {
+    //   height: '195',
+    //   width: '320',
+    //     playerVars: {
+    //     }
+    // };
+    // const videos = this.state.currentVideoList.map( item => {
+    //   return (
+    //     <div className="VideoCard">
+    //       <YouTube className=""
+    //         videoId={item.snippet.resourceId.videoId}
+    //         opts={youtubeOpts2} />
+    //       <p className="VideoCardTitle">{item.snippet.title}</p>
+    //     </div>
+    //     )
+    // })
     return (
       <div className="App">
          <section>
           <header className="Header">
-            <HashLink className="MenuItemHomeButton" smooth to="/#top">▲</HashLink>
             <h1 className="HeaderTitle" id="top">Hello, kirimin-chan</h1>
             <div className="HeaderContainer">
               <p className="HeaderText1">Virtual<br/>　Little girl<br/>　　Programmer</p>
-              <div className="FloatingButtons">
-                <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="HeaderChannelButton" onclick="ga('send', 'event', 'link', 'click', 'HeaderChannelButton')">きりみんちゃんねるへ</a>
-                <a href='https://twitter.com/intent/tweet?text=きりみんちゃん.site&url=https://kirimin-chan.site/&hashtags=きりみんちゃんねる' className="HeaderShereButton" onclick="ga('send', 'event', 'link', 'click', 'HeaderShereButton')">ついーとする</a>
+              <div className="ShareButtons">
+                <div dangerouslySetInnerHTML={{__html: `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="バーチャル幼女プログラマーきりみんちゃんの公式サイトをみたよ！" data-url="https://kirimin-chan.site" data-hashtags="#きりみんちゃんねる" data-show-count="false">Tweet</a>`}}></div>
+                <div dangerouslySetInnerHTML={{__html: `<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-normal" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>`}}></div>
+              </div>
+              <div className="LinkButtons">
+                <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="ChannelButton" onClick="ga('send', 'event', 'link', 'click', 'ChannelButton')">YouTubeチャンネルへ　＞</a>
+                <a href="https://twitter.com/kirimin_chan" className="TwitterButton" onClick="ga('send', 'event', 'link', 'click', 'TwitterlButton')">Twitterアカウントへ　＞</a>
               </div>
               <div className='HeaderOpImage1Cover' />
               <img className='HeaderOpImage1' src={op1}/>
@@ -69,11 +71,11 @@ export class Home extends Component {
               <img className='HeaderImageLogo' src={logo} />
               <div className='Menu'>
                 <HashLink className="MenuItemButton" smooth to="/#introduction">じこしょうかい</HashLink>
-                <HashLink className="MenuItemButton" smooth to="/#video">どうが</HashLink>
-                <HashLink className="MenuItemButton" smooth to="/#license">らいせんす</HashLink>
-                <HashLink className="MenuItemButton" smooth to="/#contact">おといあわせ</HashLink>
-                <HashLink className="MenuItemButton" smooth to="/#gallery">ぎゃらりー</HashLink>
-                <Link className="MenuItemButton" smooth to="./games">げーむ</Link>
+                <HashLink className="MenuItemButton" smooth to="/#video">おすすめ動画</HashLink>
+                <HashLink className="MenuItemButton" smooth to="/#license">ソーシャル</HashLink>
+                <HashLink className="MenuItemButton" smooth to="/#contact">グッズ</HashLink>
+                <HashLink className="MenuItemButton" smooth to="/#gallery">プロダクト</HashLink>
+                <Link className="MenuItemButton" smooth to="./games">おしごと</Link>
               </div>
             </div>
           </header>
@@ -88,63 +90,9 @@ export class Home extends Component {
           </div>
         </section>
         <section className="Introduction" id="introduction">
-          <h1 className="IntroductionTitle">じこしょうかい</h1>
+          <h1>きりみんちゃんねる</h1>
           <hr/>
-          <h2>きりみんちゃん</h2>
-          <div className="IntroductionContents">
-            <img className="IntroductionKiriminChan" src="./gallery/kirimin_chan.png"/>
-            <div className="IntroductionTableProfile">
-              <p className="IntroductionTableText">なまえ　　：きりみんちゃん</p>
-              <p className="IntroductionTableText">ねんれい　：７さい</p>
-              <p className="IntroductionTableText">しんちょう：１１９cm</p>
-              <p className="IntroductionTableText">たいじゅう：２２kg</p>
-              <p className="IntroductionTableText">しゅみ　　：プログラミング、おえかき、ゲーム</p>
-            </div>
-            <div className="IntroductionTableDescribe">
-              <p className="IntroductionTableText">きりみんちゃんはバーチャル幼女プログラマーです。声はおじさん。VTuberとして技術系の動画の投稿や、ライブコーディングの配信などの活動を行っています。得意分野はAndroidアプリ開発。</p>
-            </div>
-            {/* <div className="IntroductionTableHashTag">
-              <p className="IntroductionTableText">きりみんちゃんに関する話題は<a href='https://twitter.com/search?q=%23%E3%81%8D%E3%82%8A%E3%81%BF%E3%82%93%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8B&src=typd'>#きりみんちゃんねる</a>、ファンアートなど二次創作は<a href='https://twitter.com/search?q=%23kirimin_tech&src=typd'>#kirimin_tech</a>でツイートしてくれるとうれしいです！</p>
-            </div>
-            <div className="IntroductionTableRequest">
-              <p className="IntroductionTableText">マシュマロでしつもん、リクエストを募集しているよ！プログラミングに関するしつもんなどを気軽に送ってくれたら、それをネタに動画をつくったりするよ。</p>
-            </div>
-            <div className="IntroductionTablePodcast">
-              <p className="IntroductionTableText">人生fmというポッドキャストもやってるよ！知り合いのエンジニアをゲストに呼んで人生について話してもらうポッドキャストです。<a href='https://jinseifm.life/'>人生fm</a></p>
-            </div> */}
-          </div>
-        </section>
-        <section className="Links">
-          <h1>りんく</h1>
-          <hr/>
-          <div className="LinksContainer">
-            <a className="LinksButton" href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" onclick="ga('send', 'event', 'link', 'click', 'LinkChannnel')"><i class="fa fa-tv" aria-hidden="true"></i>きりみんちゃんねる(Youtube)</a>
-            <a className="LinksButton" href="https://twitter.com/kirimin_chan" onclick="ga('send', 'event', 'link', 'click', 'LinkTwitter')"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a>
-            <a className="LinksButton" href="https://www.pixiv.net/fanbox/creator/13627594"  onclick="ga('send', 'event', 'link', 'click', 'LinkFANBOX')"><i class="fa fa-pencil" aria-hidden="true"></i>FANBOX(ぶろぐ)</a>
-            <a className="LinksButton" href="https://kirimin-chan.booth.pm/"  onclick="ga('send', 'event', 'link', 'click', 'LinkBOOTH')"><i class="fa fa-list-alt" aria-hidden="true"></i>きりみんちゃんねるしょっぷ</a>
-            <a className="LinksButton" href="https://marshmallow-qa.com/kirimin"  onclick="ga('send', 'event', 'link', 'click', 'LinkMarshmallow')"><i class="fa fa-question" aria-hidden="true"></i>マシュマロ(しつもん)</a>
-          </div>
-        </section>
-        <section className="Video" id="video">
-          <h1>どうが</h1>
-          <hr/>
-          <div className="VideoContents">
-            {videos}
-          </div>
-        </section>
-        <section className="Gallery" id="gallery">
-          <h1>ぎゃらりー</h1>
-          <hr/>
-          <p>きりみんちゃんの画像(フリー素材)だよ。自由につかってね。</p>
-          <div className="GalleryContainer">
-            <img src="./gallery/lgtm1.png"/>
-            <img src="./gallery/lgtm2.png"/>
-            <img src="./gallery/lgtm4.png"/>
-            <img src="./gallery/lgtm3.png"/>
-            <img src="./gallery/teigi_taisha.jpg"/>
-            <img src="./gallery/i_think_so_too.jpg"/>
-            <img src="./gallery/akachan.jpg"/>
-          </div>
+          <p>きりみんちゃんはバーチャル幼女プログラマーとして活動している個人VTuberです。プログラミングやエンジニアの仕事に関する動画を作成したり、技術的な質問に答える配信やライブコーディングなども行っています。</p>
         </section>
         <section className="License" id="license">
           <h1 >らいせんす</h1>
@@ -154,8 +102,8 @@ export class Home extends Component {
           <p className="LicenseHeaderText">企業や営利団体での使用は個別におといあわせしてね！</p>
           <h2 className="LicenseHeaderTextTitle">○おっけー！</h2>
             <ul>
-              <li className="LicenseHeaderText">個人でのファンアート、二次創作物などの制作、販売</li>
-              <li className="LicenseHeaderText">きりみんちゃんの動画のキャプチャ画像の引用、MADなどの作成</li>
+              <li className="LicenseHeaderText">個人でのファンアート、二次創作物などの公開、販売</li>
+              <li className="LicenseHeaderText">きりみんちゃんの動画のキャプチャ画像の引用、切り抜き動画やMADなどの投稿</li>
             </ul>
           <h2 className="LicenseHeaderTextTitle">☓だめ！</h2>
           <ul>
@@ -165,23 +113,24 @@ export class Home extends Component {
             <li className="LicenseHeaderText">公式の素材を使ったグッズの販売や公式と誤解されるようなグッズの販売</li>
           </ul>
         </section>
-        <section className="Contact" id="contact">
-          <h1>おといあわせ</h1>
-          <hr/>
-          <p className="ContactText">きりみんちゃんに関するお問い合わせは、minkarakirimade@gmail.comか、Twitterで@kirimin_chanにリプライやDMしてください。</p>
-        </section>
-        <img className='IntroductionSD' src={sd} />
+        <div className="Formrun" dangerouslySetInnerHTML={{__html: `<div
+            class="formrun-embed"
+            data-formrun-form="@kirimin-chan"
+            data-formrun-redirect="true">
+          </div>
+        `}}>
+        </div>
       </div>
     );
   }
 
   componentDidMount() {
-    fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUqN87Ye4TNLB04EFhxJ0L5w&maxResults=5&key=AIzaSyC0FXYDHyJJMA5D8eSbhISejSknJq_EXOI")
-      .then(results => {
-        return results.json()
-      }).then(data => {
-        this.setState({currentVideoList: data.items })
-      })
+    // fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUqN87Ye4TNLB04EFhxJ0L5w&maxResults=5&key=AIzaSyC0FXYDHyJJMA5D8eSbhISejSknJq_EXOI")
+    //   .then(results => {
+    //     return results.json()
+    //   }).then(data => {
+    //     this.setState({currentVideoList: data.items })
+    //   })
   }
 
   _onReady(event) {
