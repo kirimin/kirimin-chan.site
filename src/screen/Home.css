@@ -56,6 +56,7 @@
   opacity: 0;
   z-index: 3;
 }
+
 @keyframes headerText1Animation {
   30% {
     opacity: 1;
@@ -428,36 +429,94 @@
   margin-top: 128px;
 }
 
-@media screen and (max-width: 480px) { /* smart phones */
+@media screen and (max-width: 1200px) { /* mobile LL */
+
+  .HeaderOpImage1 {
+    height: 150%;
+  }
+  .HeaderOpImage2 {
+    height: 150%;
+  }
+  .HeaderOpImage3 {
+    height: 150%;
+  }
+}
+
+@media screen and (max-width: 1000px) { /* mobile L */
   html { 
     font-size: 75%;
   }
 
   .HeaderTitle {
     font-size: 2rem;
-  }
-
-  .FloatingButtons {
-    top: 50%;
-    right: 0%;
-    margin-right: 16px;
-    z-index: 2;
-  }
+  }  
 
   .HeaderText1 {
     top: 30%;
-    font-size: 1.5em;
+    font-size: 3em;
   }
 
   .Menu {
     opacity: 0;
   }
 
+  .LinkButtons {
+    top: 50%;
+    left: 20%;
+  }
+
+  .ChannelButton {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    margin-right: 12px;
+  }
+
+  .TwitterButton {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+  }
+  
   .Introduction {
     margin-left: 16px;
     margin-right: 16px;
   }  
   
+  .License {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 615px) { /* mobile S */
+
+  .HeaderText1 {
+    top: 30%;
+    font-size: 1.5em;
+  }
+
+  .LinkButtons {
+    top: 75%;
+    left: 5%;
+  }
+
+  .ChannelButton {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    padding: 8px 8px;
+    margin-right: 12px;
+  }
+
+  .TwitterButton {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    padding: 8px 8px;
+  }
+
+  .Introduction {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
   .License {
     margin-left: 16px;
     margin-right: 16px;
