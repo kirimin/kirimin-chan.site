@@ -1,0 +1,80 @@
+
+/** Header **/
+  
+.Header {
+    background-color: #FF4081;
+}
+ 
+.HeaderContainer {
+    position: relative;
+}
+  
+.HeaderTitle {
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
+    color: #FFF;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    z-index: 3;
+}
+
+.Menu {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+  
+.MenuItemButton {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px #FF4081;
+    background-color: #FF4081;
+    padding: 10px 10px;
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+  
+.MenuItemHomeButton {
+    display: flex;
+    position: fixed;
+    margin-top: 24px;
+    margin-left: 16px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px #FF4081  ;
+    background-color: #FF4081;
+    padding: 8px 8px 8px 8px;
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-decoration: none;
+    animation: MenuItemButtonAnimation 1ms ease 7.5s forwards;
+    z-index: 1;
+}
+  
+.MenuItemButton:hover {
+    background-color: #F50057;
+}
+
+@media screen and (max-width: 1000px) { /* mobile L */
+    html { 
+      font-size: 75%;
+    }
+  
+    .HeaderTitle {
+      font-size: 2rem;
+    }
+  
+    .Menu {
+      opacity: 0;
+    }
+}
+  
+@media screen and (max-width: 615px) { /* mobile S */
+  
+}
