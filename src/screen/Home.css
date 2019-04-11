@@ -6,7 +6,7 @@
 
 /** Header **/
 
-.Header {
+.Header.Home {
   background-color: #2196F3;
   animation: headerBackgroundAnimation 1s ease 2s forwards;
 }
