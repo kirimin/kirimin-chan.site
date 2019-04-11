@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import OseroGame from './OseroGame'
 import './OseroMenu.css'
 import menuImage from './assets/menu_image.png'
 

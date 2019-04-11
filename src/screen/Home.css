@@ -19,19 +19,11 @@
   position: relative;
 }
 
-.HeaderTitle {
-  text-align: center;
-  font-size: 4rem;
-  font-family: 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
-  color: #FFF;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+.HeaderTitle.Home {
   opacity: 0;
   animation: headerTitleAnimation 1.5s ease 2s forwards;
-  z-index: 3;
 }
+
 @keyframes headerTitleAnimation {
   0% {
     opacity: 0;
@@ -43,7 +35,7 @@
   }
 }
 
-.HeaderText1 {
+.Home_HeaderText1 {
   position: absolute;
   top: 25%;
   left: 50%;
@@ -69,24 +61,7 @@
   }
 }
 
-.HeaderText2 {
-  position: absolute;
-  top: 25%;
-  right: 0%;
-  margin-right: 32px;
-  color: #FFF;
-  font-size: 4em;
-  font-family: 'Kodomo';
-  animation: headerText2Animation 2s ease 8s forwards;
-  opacity: 0;
-  z-index: 3;
-}
-@keyframes headerText2Animation {
-  0% {opacity: 0}
-  100% {opacity: 1}
-}
-
-.HeaderOpImage1 {
+.Home_HeaderOpImage1 {
   position: absolute;
   max-width: 100%;
   height: auto;
@@ -99,7 +74,7 @@
   opacity: 0;
   z-index: 0;
 }
-.HeaderOpImage2 {
+.Home_HeaderOpImage2 {
   position: absolute;
   max-width: 100%;
   height: auto;
@@ -112,7 +87,7 @@
   opacity: 0;
   z-index: 0;
 }
-.HeaderOpImage3 {
+.Home_HeaderOpImage3 {
   position: absolute;
   max-width: 100%;
   height: auto;
@@ -134,7 +109,7 @@
   100% {opacity: 0;}
 }
 
-.HeaderOpImage1Cover {
+.Home_HeaderOpImage1Cover {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -144,7 +119,7 @@
   animation: headerImageCoverAnimation 1s ease 4s forwards;
   z-index: 1;
 }
-.HeaderOpImage2Cover {
+.Home_HeaderOpImage2Cover {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -154,7 +129,7 @@
   animation: headerImageCoverAnimation 1s ease 5s forwards;
   z-index: 1;
 }
-.HeaderOpImage3Cover {
+.Home_HeaderOpImage3Cover {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -165,7 +140,7 @@
   z-index: 1;
 }
 
-.HeaderImage {
+.Home_HeaderImage {
   width: 100%;
   height: auto;
   vertical-align: bottom;
@@ -178,7 +153,7 @@
   100% { opacity: 1}
 }
 
-.HeaderImageCover {
+.Home_HeaderImageCover {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -203,7 +178,7 @@
   }
 }
 
-.HeaderImageLogo {
+.Home_HeaderImageLogo {
   position: absolute;
   width: 30%;
   height: auto;
@@ -225,7 +200,7 @@
   }
 }
 
-.ShareButtons {
+.Home_ShareButtons {
   display: flex;
   flex-flow: column;
   position: absolute;
@@ -239,7 +214,7 @@
   opacity: 0;
 }
 
-.LinkButtons {
+.Home_LinkButtons {
   display: flex;
   flex-flow: row;
   position: absolute;
@@ -260,7 +235,7 @@
   }
 }
 
-.ChannelButton {
+.Home_ChannelButton {
   margin-bottom: 16px;
   border-radius: 4px;
   box-shadow: 1px 1px 3px #B71C1C;
@@ -272,12 +247,12 @@
   margin-right: 32px;
 }
 
-.ChannelButton:hover {
+.Home_ChannelButton:hover {
   background-color: #E53935;
-  animation: shaking .2s infinite;
+  animation: shaking 2s infinite;
 }
 
-.TwitterButton {
+.Home_TwitterButton {
   margin-bottom: 16px;
   border-radius: 4px;
   box-shadow: 1px 1px 3px #1976D2;
@@ -288,9 +263,9 @@
   text-decoration: none;
 }
 
-.TwitterButton:hover {
+.Home_TwitterButton:hover {
   background-color: #1976D2;
-  animation: shaking .2s infinite;
+  animation: shaking 2s infinite;
 }
 
 @keyframes shaking {
@@ -301,8 +276,7 @@
   100% {transform: translate(0px, 0px) rotateZ(0deg)}
 }
 
-
-.HeaderShereButton {
+.Home_HeaderShereButton {
   margin-bottom: 16px;
   border-radius: 4px;
   box-shadow: 1px 1px 3px #1976D2;
@@ -314,40 +288,12 @@
   opacity: 0.2;
 }
 
-.Menu {
-  display: flex;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-
-.MenuItemButton {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  margin-right: 16px;
-  border-radius: 4px;
-  box-shadow: 1px 1px 3px #FF4081;
-  background-color: #FF4081;
-  padding: 10px 10px;
-  color: #ffffff;
-  font-size: 1.4rem;
-  text-decoration: none;
+.MenuItemButton.Home {
   animation: MenuItemButtonAnimation 1ms ease 7.5s forwards;
   opacity: 0;
 }
 
-.MenuItemHomeButton {
-  display: flex;
-  position: fixed;
-  margin-top: 24px;
-  margin-left: 16px;
-  border-radius: 4px;
-  box-shadow: 1px 1px 3px #FF4081  ;
-  background-color: #FF4081;
-  padding: 8px 8px 8px 8px;
-  color: #ffffff;
-  font-size: 1.4rem;
-  text-decoration: none;
+.MenuItemHomeButton.Home {
   animation: MenuItemButtonAnimation 1ms ease 7.5s forwards;
   opacity: 0;
   z-index: 1;
@@ -367,13 +313,13 @@
   }
 }
 
-.MovieYoutube {
+.Home_MovieYoutube {
   position:relative;
   width:100%;
   padding-top:56.25%;
 }
 
-.MovieYoutubeFrame {
+.Home_MovieYoutubeFrame {
   position:absolute;
   top:0;
   right:0;
@@ -383,105 +329,94 @@
 
 /** Body **/
 
-.Introduction {
+.Home_Introduction {
   margin-top: 64px;
   margin-left: 64px;
   margin-right: 64px;
 }
 
-.Introduction h1 {
+.Home_Introduction h1 {
   color: #FF4081;
   font-size: 2em;
 }
 
-.Introduction p {
+.Home_Introduction p {
   font-size: 1.2em;
   margin-top: 32px;
   color: #5D4037;
   margin-bottom: 8px;
 }
 
-.License {
+.Home_License {
   margin-top: 64px;
   margin-left: 64px;
   margin-right: 64px;  
 }
 
-.License h1 {
+.Home_License h1 {
   font-size: 2em;
   color: #FF4081;
 }
 
-.LicenseHeaderTextTitle {
+.Home_LicenseHeaderTextTitle {
   margin-top: 32px;
   color: #5D4037;
   font-size: 1.5rem;
   margin-bottom: 8px;
 }
 
-.LicenseHeaderText {
+.Home_LicenseHeaderText {
   color: #5D4037;
   font-size: 1.2rem;
   margin-bottom: 8px;
 }
 
-.Formrun {
+.Home_Formrun {
   margin-top: 128px;
 }
 
 @media screen and (max-width: 1200px) { /* mobile LL */
 
-  .HeaderOpImage1 {
+  .Home_HeaderOpImage1 {
     height: 150%;
   }
-  .HeaderOpImage2 {
+  .Home_HeaderOpImage2 {
     height: 150%;
   }
-  .HeaderOpImage3 {
+  .Home_HeaderOpImage3 {
     height: 150%;
   }
 }
 
 @media screen and (max-width: 1000px) { /* mobile L */
-  html { 
-    font-size: 75%;
-  }
 
-  .HeaderTitle {
-    font-size: 2rem;
-  }  
-
-  .HeaderText1 {
+  .Home_HeaderText1 {
     top: 30%;
     font-size: 3em;
   }
 
-  .Menu {
-    opacity: 0;
-  }
-
-  .LinkButtons {
+  .Home_LinkButtons {
     top: 50%;
     left: 20%;
   }
 
-  .ChannelButton {
+  .Home_ChannelButton {
     margin-bottom: 12px;
     font-size: 1.5rem;
     margin-right: 12px;
   }
 
-  .TwitterButton {
+  .Home_TwitterButton {
     margin-bottom: 12px;
     font-size: 1.5rem;
   }
   
-  .Introduction {
+  .Home_Introduction {
     margin-left: 16px;
     margin-right: 16px;
   }  
   
-  .License {
+  .Home_License {
     margin-left: 16px;
     margin-right: 16px;
   }
@@ -489,35 +424,35 @@
 
 @media screen and (max-width: 615px) { /* mobile S */
 
-  .HeaderText1 {
+  .Home_HeaderText1 {
     top: 30%;
     font-size: 1.5em;
   }
 
-  .LinkButtons {
+  .Home_LinkButtons {
     top: 75%;
     left: 5%;
   }
 
-  .ChannelButton {
+  .Home_ChannelButton {
     margin-bottom: 12px;
     font-size: 1rem;
     padding: 8px 8px;
     margin-right: 12px;
   }
 
-  .TwitterButton {
+  .Home_TwitterButton {
     margin-bottom: 12px;
     font-size: 1rem;
     padding: 8px 8px;
   }
 
-  .Introduction {
+  .Home_Introduction {
     margin-left: 16px;
     margin-right: 16px;
   }
 
-  .License {
+  .Home_License {
     margin-left: 16px;
     margin-right: 16px;
   }
