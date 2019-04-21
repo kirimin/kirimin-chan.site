@@ -67,6 +67,9 @@ export class Profile extends Component {
               <div className="Margin32"/>
               <div className="Margin32"/>
               <a href="https://marshmallow-qa.com/kirimin_chan" className="Button Pink">マシュマロをなげる！</a>
+              <br/>
+              <div className="Margin32"/>
+              <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w?view_as=subscriber" className="Button Pink">チャンネル登録する！</a>
               <div className="Margin32"/>
               <div className="Margin32"/>
             </div>
