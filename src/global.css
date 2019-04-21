@@ -1,3 +1,30 @@
+.Margin32 {
+    margin-top: 32px;
+}
+
+.Button {
+    margin-right: 16px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px #03A9F4;
+    background-color: #03A9F4;
+    padding: 16px 16px;
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.Button:hover {
+    background-color: #B3E5FC;
+}
+
+.Button.Pink {
+    box-shadow: 1px 1px 3px #FF4081;
+    background-color: #FF4081;
+}
+
+.Button.Pink:hover {
+    background-color: #F50057;
+}
 
 /** Header **/
   

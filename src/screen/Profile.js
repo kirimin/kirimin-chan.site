@@ -7,13 +7,6 @@ import './Profile.css';
 
 export class Profile extends Component {
 
-  constructor() {
-    super()
-    this.state = {
-      currentVideoList : [],
-    }
-  }
-
   render() {
     return (
       <div className="Profile">
@@ -23,11 +16,12 @@ export class Profile extends Component {
             <div className="HeaderContainer">
               <div className='Menu'>
                 <Link className="MenuItemButton" to="../">とっぷ</Link>
-                <HashLink className="MenuItemButton" smooth to="/#video">おすすめ動画</HashLink>
+                <Link className="MenuItemButton" to="./profile">じこしょうかい</Link>
+                <Link className="MenuItemButton" to="./videos">おすすめ動画</Link>
                 <HashLink className="MenuItemButton" smooth to="/#license">ソーシャル</HashLink>
                 <HashLink className="MenuItemButton" smooth to="/#contact">グッズ</HashLink>
                 <HashLink className="MenuItemButton" smooth to="/#gallery">プロダクト</HashLink>
-                <Link className="MenuItemButton" smooth to="./games">おしごと</Link>
+                <Link className="MenuItemButton" to="./games">おしごと</Link>
               </div>
             </div>
         </header>
@@ -44,27 +38,37 @@ export class Profile extends Component {
             </div>
             <div className="Profile_KiriminChanStatus">
               <table>
-                <tr>
-                  <th>ねんれい</th><td>7さい</td>
-                </tr>
-                <tr>
-                  <th>しんちょう</th><td>119cm</td>
-                </tr>
-                <tr>
-                  <th>たいじゅう</th><td>22kg</td>
-                </tr>
-                <tr>
-                  <th>しゅみ</th><td>プログラミング、おえかき、ゲーム</td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <th>ねんれい</th><td>7さい</td>
+                  </tr>
+                  <tr>
+                    <th>しんちょう</th><td>119cm</td>
+                  </tr>
+                  <tr>
+                    <th>たいじゅう</th><td>22kg</td>
+                  </tr>
+                  <tr>
+                    <th>しゅみ</th><td>プログラミング、おえかき、ゲーム</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <div className="Profile_KiriminChanDescription">
               <h2>ハッシュタグ</h2>
               <p>きりみんちゃんに関する話題は<a href="https://twitter.com/search?q=%23%E3%81%8D%E3%82%8A%E3%81%BF%E3%82%93%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8B&src=typd">#きりみんちゃんねる</a>、ファンアートや二次創作などは<a href="https://twitter.com/search?q=%23kirimin_tech&src=typd">#kirimin_tech</a>を付けてツイートしてくれるとうれしいな！</p>
+              <div className="Margin32"/>
+              <div className="Margin32"/>
+              <a href="https://twitter.com/search?q=%23kirimin_tech&src=typd" className="Button Pink">ファンアートを見てみる</a>
             </div>
             <div className="Profile_KiriminChanDescription">
               <h2>マシュマロ</h2>
-              <p><a href="https://marshmallow-qa.com/kirimin_chan">マシュマロ</a>で質問やお悩み、はげましのおたよりなどを募集しているよ！プログラミングやエンジニア業界についての質問は配信で真面目に答えるよ！</p>
+              <p>マシュマロで質問やお悩み、はげましのおたよりなどを募集しているよ！プログラミングやエンジニア業界についての質問は配信で真面目に答えるよ！</p>
+              <div className="Margin32"/>
+              <div className="Margin32"/>
+              <a href="https://marshmallow-qa.com/kirimin_chan" className="Button Pink">マシュマロをなげる！</a>
+              <div className="Margin32"/>
+              <div className="Margin32"/>
             </div>
           </div>
         </section>

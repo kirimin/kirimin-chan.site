@@ -12,13 +12,6 @@ import './Home.css';
 
 export class Home extends Component {
 
-  constructor() {
-    super()
-    this.state = {
-      currentVideoList : [],
-    }
-  }
-
   render() {
     const youtubeOpts = {
       height: '390',
@@ -29,22 +22,7 @@ export class Home extends Component {
           loop:1,
         }
     };
-    // const youtubeOpts2 = {
-    //   height: '195',
-    //   width: '320',
-    //     playerVars: {
-    //     }
-    // };
-    // const videos = this.state.currentVideoList.map( item => {
-    //   return (
-    //     <div className="Home_VideoCard">
-    //       <YouTube className="Home_"
-    //         videoId={item.snippet.resourceId.videoId}
-    //         opts={youtubeOpts2} />
-    //       <p className="Home_VideoCardTitle">{item.snippet.title}</p>
-    //     </div>
-    //     )
-    // })
+
     return (
       <div className="Home">
          <section>
@@ -71,7 +49,7 @@ export class Home extends Component {
               <img className='Home_HeaderImageLogo' src={logo} />
               <div className='Menu'>
                 <Link className="MenuItemButton Home" to="./profile">じこしょうかい</Link>
-                <HashLink className="MenuItemButton Home" smooth to="/#video">おすすめ動画</HashLink>
+                <Link className="MenuItemButton Home" to="./videos">おすすめ動画</Link>
                 <HashLink className="MenuItemButton Home" smooth to="/#license">ソーシャル</HashLink>
                 <HashLink className="MenuItemButton Home" smooth to="/#contact">グッズ</HashLink>
                 <HashLink className="MenuItemButton Home" smooth to="/#gallery">プロダクト</HashLink>
@@ -125,12 +103,6 @@ export class Home extends Component {
   }
 
   componentDidMount() {
-    // fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUqN87Ye4TNLB04EFhxJ0L5w&maxResults=5&key=AIzaSyC0FXYDHyJJMA5D8eSbhISejSknJq_EXOI")
-    //   .then(results => {
-    //     return results.json()
-    //   }).then(data => {
-    //     this.setState({currentVideoList: data.items })
-    //   })
   }
 
   _onReady(event) {
