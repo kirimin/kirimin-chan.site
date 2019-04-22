@@ -20,42 +20,12 @@ export class Home extends Component {
           loop:1,
         }
     };
+    let requireSkipAnime = new URLSearchParams(window.location.search).get('skip_anime')
 
     return (
       <div className="Home">
          <section>
-          <header className="Header Home">
-            <h1 className="HeaderTitle Home" id="top">Hello, kirimin-chan</h1>
-            <div className="HeaderContainer">
-              <p className="Home_HeaderText1">Virtual<br/>　Little girl<br/>　　Programmer</p>
-              <div className="Home_ShareButtons">
-                <div dangerouslySetInnerHTML={{__html: `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="バーチャル幼女プログラマーきりみんちゃんの公式サイトをみたよ！" data-url="https://kirimin-chan.site" data-hashtags="きりみんちゃんねる" data-show-count="false">Tweet</a>`}}></div>
-                <div dangerouslySetInnerHTML={{__html: `<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-normal" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>`}}></div>
-              </div>
-              <div className="Home_LinkButtons">
-                <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="Home_ChannelButton" onClick="ga('send', 'event', 'link', 'click', 'ChannelButton')">YouTubeチャンネルへ　＞</a>
-                <a href="https://twitter.com/kirimin_chan" className="Home_TwitterButton" onClick="ga('send', 'event', 'link', 'click', 'TwitterlButton')">Twitterアカウントへ　＞</a>
-              </div>
-              <div className='Home_HeaderOpImage1Cover' />
-              <img className='Home_HeaderOpImage1' src={op1}/>
-              <div className='Home_HeaderOpImage2Cover' />
-              <img className='Home_HeaderOpImage2' src={op2}/>
-              <div className='Home_HeaderOpImage3Cover' />
-              <img className='Home_HeaderOpImage3' src={op3}/>
-              <div className='Home_HeaderImageCover' />
-              <img className='Home_HeaderImage' src={header} />
-              <img className='Home_HeaderImageLogo' src={logo} />
-              <div className='Menu'>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site/">とっぷ</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//profile">じこしょうかい</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//videos">おすすめ動画</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//social">ソーシャル</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//products">プロダクト</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//gallery">素材</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//works">おしごと</a>
-              </div>
-            </div>
-          </header>
+          {requireSkipAnime ? this.simpleHeader() : this.animationalHeader()}
         </section>
         <section className="Home_Movie">
           <div className="Home_MovieYoutube">
@@ -101,7 +71,70 @@ export class Home extends Component {
     );
   }
 
-  componentDidMount() {
+  animationalHeader() {
+    return (
+        <header className="Header Home">
+            <h1 className="HeaderTitle Home" id="top">Hello, kirimin-chan</h1>
+            <div className="HeaderContainer">
+              <p className="Home_HeaderText1">Virtual<br/>　Little girl<br/>　　Programmer</p>
+              <div className="Home_ShareButtons">
+                <div dangerouslySetInnerHTML={{__html: `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="バーチャル幼女プログラマーきりみんちゃんの公式サイトをみたよ！" data-url="https://kirimin-chan.site" data-hashtags="きりみんちゃんねる" data-show-count="false">Tweet</a>`}}></div>
+                <div dangerouslySetInnerHTML={{__html: `<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-normal" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>`}}></div>
+              </div>
+              <div className="Home_LinkButtons">
+                <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="Home_ChannelButton" onClick="ga('send', 'event', 'link', 'click', 'ChannelButton')">YouTubeチャンネルへ　＞</a>
+                <a href="https://twitter.com/kirimin_chan" className="Home_TwitterButton" onClick="ga('send', 'event', 'link', 'click', 'TwitterlButton')">Twitterアカウントへ　＞</a>
+              </div>
+              <div className='Home_HeaderOpImage1Cover' />
+              <img className='Home_HeaderOpImage1' src={op1}/>
+              <div className='Home_HeaderOpImage2Cover' />
+              <img className='Home_HeaderOpImage2' src={op2}/>
+              <div className='Home_HeaderOpImage3Cover' />
+              <img className='Home_HeaderOpImage3' src={op3}/>
+              <div className='Home_HeaderImageCover' />
+              <img className='Home_HeaderImage' src={header} />
+              <img className='Home_HeaderImageLogo' src={logo} />
+              <div className='Menu'>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site/">とっぷ</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site//profile">じこしょうかい</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site//videos">おすすめ動画</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site//social">ソーシャル</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site//products">プロダクト</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site//gallery">素材</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site//works">おしごと</a>
+              </div>
+            </div>
+          </header>
+    )
+  }
+
+  simpleHeader() {
+    return (
+      <header className="Header">
+          <h1 className="HeaderTitle" id="top">Hello, kirimin-chan</h1>
+          <div className="HeaderContainer">
+            <div className="Home_ShareButtons Skip">
+              <div dangerouslySetInnerHTML={{__html: `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="バーチャル幼女プログラマーきりみんちゃんの公式サイトをみたよ！" data-url="https://kirimin-chan.site" data-hashtags="きりみんちゃんねる" data-show-count="false">Tweet</a>`}}></div>
+              <div dangerouslySetInnerHTML={{__html: `<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-normal" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>`}}></div>
+            </div>
+            <div className="Home_LinkButtons Skip">
+              <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="Home_ChannelButton" onClick="ga('send', 'event', 'link', 'click', 'ChannelButton')">YouTubeチャンネルへ　＞</a>
+              <a href="https://twitter.com/kirimin_chan" className="Home_TwitterButton" onClick="ga('send', 'event', 'link', 'click', 'TwitterlButton')">Twitterアカウントへ　＞</a>
+            </div>
+            <img className='Home_HeaderImage Skip' src={header} />
+            <img className='Home_HeaderImageLogo Skip' src={logo} />
+            <div className='Menu'>
+              <a className="MenuItemButton" href="https://kirimin-chan.site/">とっぷ</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site//profile">じこしょうかい</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site//videos">おすすめ動画</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site//social">ソーシャル</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site//products">プロダクト</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site//gallery">素材</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site//works">おしごと</a>
+            </div>
+          </div>
+        </header>
+    )
   }
 
   _onReady(event) {

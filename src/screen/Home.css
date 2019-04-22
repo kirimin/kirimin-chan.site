@@ -148,6 +148,12 @@
   opacity: 0;
   z-index: 0;
 }
+
+.Home_HeaderImage.Skip {
+  opacity: 1;
+  animation: none;
+}
+
 @keyframes headerImageAnimation {
   0% {opacity: 0}
   100% { opacity: 1}
@@ -190,6 +196,12 @@
   z-index: 0;
   animation: HeaderImageLogoAnimation 1.5s ease 8s forwards;
 }
+
+.Home_HeaderImageLogo.Skip {
+  opacity: 1;
+  animation: none;
+}
+
 @keyframes HeaderImageLogoAnimation {
   0% {opacity: 0;
     transform: translateX(10%)
@@ -214,6 +226,11 @@
   opacity: 0;
 }
 
+.Home_ShareButtons.Skip {
+  opacity: 1;
+  animation: none;
+}
+
 .Home_LinkButtons {
   display: flex;
   flex-flow: row;
@@ -223,6 +240,11 @@
   z-index: 4;
   animation: ButtonsShowAnimation 1ms ease 7.5s forwards;
   opacity: 0;
+}
+
+.Home_LinkButtons.Skip {
+  opacity: 1;
+  animation: none;
 }
 
 @keyframes ButtonsShowAnimation {

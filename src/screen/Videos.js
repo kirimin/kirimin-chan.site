@@ -36,7 +36,7 @@ export class Videos extends Component {
             <h1 className="HeaderTitle" id="top">おすすめ動画</h1>
             <div className="HeaderContainer">
               <div className='Menu'>
-                <a className="MenuItemButton" href="https://kirimin-chan.site/">とっぷ</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/?skip_anime=true">とっぷ</a>
                 <a className="MenuItemButton" href="https://kirimin-chan.site//profile">じこしょうかい</a>
                 <a className="MenuItemButton" href="https://kirimin-chan.site//videos">おすすめ動画</a>
                 <a className="MenuItemButton" href="https://kirimin-chan.site//social">ソーシャル</a>
