@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import {HashLink} from 'react-router-hash-link'
 import YouTube from 'react-youtube';
 
 import './Videos.css';
@@ -38,13 +36,13 @@ export class Videos extends Component {
             <h1 className="HeaderTitle" id="top">おすすめ動画</h1>
             <div className="HeaderContainer">
               <div className='Menu'>
-                <Link className="MenuItemButton" to="../">とっぷ</Link>
-                <Link className="MenuItemButton" to="./profile">じこしょうかい</Link>
-                <Link className="MenuItemButton" to="./videos">おすすめ動画</Link>
-                <Link className="MenuItemButton" to="./social">ソーシャル</Link>
-                <Link className="MenuItemButton" to="./products">プロダクト</Link>
-                <Link className="MenuItemButton" to="./gallery">素材</Link>
-                <Link className="MenuItemButton" to="./works">おしごと</Link>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/">とっぷ</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site//profile">じこしょうかい</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site//videos">おすすめ動画</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site//social">ソーシャル</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site//products">プロダクト</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site//gallery">素材</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site//works">おしごと</a>
               </div>
             </div>
         </header>

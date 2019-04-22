@@ -102,6 +102,9 @@
 
 .Menu {
     display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    flex-wrap: wrap;
     position: absolute;
     top: 0px;
     right: 0px;
@@ -119,23 +122,7 @@
     font-size: 1.4rem;
     text-decoration: none;
 }
-  
-.MenuItemHomeButton {
-    display: flex;
-    position: fixed;
-    margin-top: 24px;
-    margin-left: 16px;
-    border-radius: 4px;
-    box-shadow: 1px 1px 3px #FF4081  ;
-    background-color: #FF4081;
-    padding: 8px 8px 8px 8px;
-    color: #ffffff;
-    font-size: 1.4rem;
-    text-decoration: none;
-    animation: MenuItemButtonAnimation 1ms ease 7.5s forwards;
-    z-index: 1;
-}
-  
+
 .MenuItemButton:hover {
     background-color: #F50057;
 }
@@ -148,12 +135,24 @@
     .HeaderTitle {
       font-size: 2rem;
     }
-  
+
     .Menu {
-      opacity: 0;
+        margin-left: 16px;
     }
-}
+
+    .MenuItemButton {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        margin-right: 8px;
+    }  
+  }
   
 @media screen and (max-width: 615px) { /* mobile S */
-  
+    .MenuItemButton {
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-right: 8px;
+        padding: 6px 6px;
+        font-size: 0.8rem;
+    }  
 }
