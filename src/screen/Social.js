@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import YouTube from 'react-youtube';
 
 import './Social.css';
 import insta from '../assets/insta.png'
