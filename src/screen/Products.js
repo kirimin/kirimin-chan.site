@@ -15,7 +15,7 @@ export class Products extends Component {
       <div className="Products">
          <section>
           <header className="Header">
-            <h1 className="HeaderTitle" id="top">ソーシャル</h1>
+            <h1 className="HeaderTitle" id="top">プロダクト</h1>
             <div className="HeaderContainer">
               <div className='Menu'>
                 <a className="MenuItemButton" href="https://kirimin-chan.site/?skip_anime=true">とっぷ</a>
