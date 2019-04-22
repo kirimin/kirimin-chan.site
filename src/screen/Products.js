@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import './Products.css';
 import booth from '../assets/booth.png'
+import jinseifm from '../assets/jinseifm.png'
 
 export class Products extends Component {
 
@@ -45,6 +46,9 @@ export class Products extends Component {
             <p>2019/4/14 技術書典が初出。フリーランスの働き方やお金についてなどを解説した本です。</p>
             <a href="https://kirimin-chan.booth.pm/items/1313813"><img src="https://booth.pximg.net/c/620x620/023c5dec-c356-48b7-a126-d3fab8cc10ba/i/1313813/14f4414d-b20b-448d-90c3-fd07767065f0_base_resized.jpg" /></a>
           </div>
+          <h1>人生fm</h1>
+          <p>人生fmはきりみんちゃんが知り合いのエンジニアなどの人にエンジニアになったきっかけや半生について自由に語ってもらうポッドキャスト(ネットラジオ)です。</p>
+          <a href="https://jinseifm.life/"><img src={jinseifm} /></a>
         </section>
       </div>
     )
