@@ -9,6 +9,7 @@ import Videos from './screen/Videos'
 import Social from './screen/Social'
 import Products from './screen/Products'
 import Gallery from './screen/Gallery'
+import Works from './screen/Works'
 import Games from './screen/games/Games'
 import Osero from './screen/games/osero/Osero'
 import Services from './screen/services/Services'
@@ -22,6 +23,7 @@ const App = () => (
         <Route exact path='/social' component={Social} />
         <Route exact path='/products' component={Products} />
         <Route exact path='/gallery' component={Gallery} />
+        <Route exact path='/works' component={Works} />
         <Route exact path='/games' component={Games} />
         <Route exact path='/games/osero' component={Osero} />
         <Route exact path='/services' component={Services} />
