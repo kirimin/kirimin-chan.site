@@ -1,0 +1,47 @@
+.Social {
+  background: #FFF;
+}
+
+/** Body **/
+.Social_Body {
+  margin-top: 128px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.Social_Body h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 8px;
+  margin-top: 32px;
+}
+
+.Social_Body hr {
+  height: 3px;
+  border: none;
+  border-top: 3px #03A9F4 dashed;
+}
+
+.Social_Body p {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.Social_Body img {
+  width: 100%;
+  height: auto;
+}
+
+
+@media screen and (max-width: 1200px) { /* mobile LL */
+}
+
+@media screen and (max-width: 1000px) { /* mobile L */
+
+}
+
+@media screen and (max-width: 615px) { /* mobile S */
+
+}

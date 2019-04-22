@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import {HashLink} from 'react-router-hash-link'
 import YouTube from 'react-youtube'
 
 import header from '../assets/header_image.png'
