@@ -50,10 +50,9 @@ export class Home extends Component {
               <div className='Menu'>
                 <Link className="MenuItemButton Home" to="./profile">じこしょうかい</Link>
                 <Link className="MenuItemButton Home" to="./videos">おすすめ動画</Link>
-                <HashLink className="MenuItemButton Home" smooth to="/#license">ソーシャル</HashLink>
-                <HashLink className="MenuItemButton Home" smooth to="/#contact">グッズ</HashLink>
-                <HashLink className="MenuItemButton Home" smooth to="/#gallery">プロダクト</HashLink>
-                <Link className="MenuItemButton Home" smooth to="./games">おしごと</Link>
+                <Link className="MenuItemButton Home" to="./social">ソーシャル</Link>
+                <Link className="MenuItemButton Home" to="/products">プロダクト</Link>
+                <Link className="MenuItemButton Home" to="./works">おしごと</Link>
               </div>
             </div>
           </header>
