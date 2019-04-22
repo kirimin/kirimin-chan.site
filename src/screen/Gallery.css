@@ -1,0 +1,101 @@
+.Gallery {
+  background: #FFF;
+}
+
+/** Body **/
+.Gallery_Body {
+  margin-top: 128px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.Gallery_Body h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 8px;
+  margin-top: 32px;
+}
+
+.Gallery_Body hr {
+  height: 3px;
+  border: none;
+  border-top: 3px #03A9F4 dashed;
+}
+
+.Gallery_Body p {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.Gallery_Body img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+}
+
+.Gallery_Doujin img {
+  width: 400px;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.Gallery_OfficeialImageContainer {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.Gallery_OfficeialImageContainer img {
+  width: 300px;
+  height: 600px;
+  object-fit: contain;
+}
+
+.Gallery_Free {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.Gallery_ImageCard {
+  padding: 8px;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 32px;
+  margin-bottom: 32px;
+  background-color: #EEE
+}
+
+.Gallery_ImageCard input {
+  font-size: 1.2rem;
+  width: 280px;
+}
+
+.Gallery_BannerContainer {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.Gallery_BannerContainer img {
+  width: 300px;
+  height: 500px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) { /* mobile LL */
+}
+
+@media screen and (max-width: 1000px) { /* mobile L */
+
+}
+
+@media screen and (max-width: 615px) { /* mobile S */
+
+}

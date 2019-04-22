@@ -1,0 +1,53 @@
+.Services {
+    background: #333;
+  }
+  
+  /** Body **/
+  .Services_Body {
+    margin-top: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  
+  .Services_Body h1 {
+    color: #CCC;
+    font-size: 2em;
+    margin-bottom: 8px;
+    margin-top: 32px;
+  }
+  
+  .Services_Body hr {
+    height: 3px;
+    border: none;
+    border-top: 3px #03A9F4 dashed;
+  }
+  
+  .Services_Body p {
+    color: #AAA;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+  
+  .Services_Screenshot {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+  }
+
+  .Services_PlayStoreLink {
+    width: 240px;
+    height: auto;
+  }
+  
+  
+  @media screen and (max-width: 1200px) { /* mobile LL */
+  }
+  
+  @media screen and (max-width: 1000px) { /* mobile L */
+  
+  }
+  
+  @media screen and (max-width: 615px) { /* mobile S */
+  
+  }

@@ -30,7 +30,7 @@ export class Home extends Component {
             <div className="HeaderContainer">
               <p className="Home_HeaderText1">Virtual<br/>　Little girl<br/>　　Programmer</p>
               <div className="Home_ShareButtons">
-                <div dangerouslySetInnerHTML={{__html: `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="バーチャル幼女プログラマーきりみんちゃんの公式サイトをみたよ！" data-url="https://kirimin-chan.site" data-hashtags="#きりみんちゃんねる" data-show-count="false">Tweet</a>`}}></div>
+                <div dangerouslySetInnerHTML={{__html: `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="バーチャル幼女プログラマーきりみんちゃんの公式サイトをみたよ！" data-url="https://kirimin-chan.site" data-hashtags="きりみんちゃんねる" data-show-count="false">Tweet</a>`}}></div>
                 <div dangerouslySetInnerHTML={{__html: `<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-normal" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>`}}></div>
               </div>
               <div className="Home_LinkButtons">
@@ -51,6 +51,7 @@ export class Home extends Component {
                 <Link className="MenuItemButton Home" to="./videos">おすすめ動画</Link>
                 <Link className="MenuItemButton Home" to="./social">ソーシャル</Link>
                 <Link className="MenuItemButton Home" to="/products">プロダクト</Link>
+                <Link className="MenuItemButton Home" to="/gallery">素材</Link>
                 <Link className="MenuItemButton Home" to="./works">おしごと</Link>
               </div>
             </div>

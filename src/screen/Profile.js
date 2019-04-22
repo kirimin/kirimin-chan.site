@@ -19,6 +19,7 @@ export class Profile extends Component {
                 <Link className="MenuItemButton" to="./videos">おすすめ動画</Link>
                 <Link className="MenuItemButton" to="./social">ソーシャル</Link>
                 <Link className="MenuItemButton" to="./products">プロダクト</Link>
+                <Link className="MenuItemButton" to="./gallery">素材</Link>
                 <Link className="MenuItemButton" to="./works">おしごと</Link>
               </div>
             </div>
