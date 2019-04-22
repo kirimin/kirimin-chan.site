@@ -37,12 +37,12 @@ export class Videos extends Component {
             <div className="HeaderContainer">
               <div className='Menu'>
                 <a className="MenuItemButton" href="https://kirimin-chan.site/?skip_anime=true">とっぷ</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//profile">じこしょうかい</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//videos">おすすめ動画</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//social">ソーシャル</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//products">プロダクト</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//gallery">素材</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//works">おしごと</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/profile">じこしょうかい</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/videos">おすすめ動画</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/social">ソーシャル</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/products">プロダクト</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/gallery">素材</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/works">おしごと</a>
               </div>
             </div>
         </header>
@@ -215,6 +215,7 @@ export class Videos extends Component {
         videoId={id}
         opts={opts} />
       <p className="Videos_VideoCardTitle">{title}</p>
+      <p className="Videos_VideoCardDescription">{description}</p>
       <br/>
     </div>
     )

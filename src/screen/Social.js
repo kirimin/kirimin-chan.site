@@ -19,12 +19,12 @@ export class Social extends Component {
             <div className="HeaderContainer">
               <div className='Menu'>
                 <a className="MenuItemButton" href="https://kirimin-chan.site/?skip_anime=true">とっぷ</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//profile">じこしょうかい</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//videos">おすすめ動画</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//social">ソーシャル</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//products">プロダクト</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//gallery">素材</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//works">おしごと</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/profile">じこしょうかい</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/videos">おすすめ動画</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/social">ソーシャル</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/products">プロダクト</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/gallery">素材</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/works">おしごと</a>
               </div>
             </div>
         </header>
@@ -40,11 +40,15 @@ export class Social extends Component {
             <h1>Instagram</h1>
             <hr/>
             <p>きりみんちゃんのInstagramでは主にきりみんちゃんのイラストやお写真を投稿しています！</p>
-            <a href="https://www.instagram.com/kirimin/"><img src={insta} /></a>
+            <div className="Social_Thumbnail">
+              <a href="https://www.instagram.com/kirimin/"><img src={insta} /></a>
+            </div>
             <h1>FANBOX</h1>
             <hr/>
             <p>FANBOXではブログ的な内容を書いたり、有料プランの方向けに特別コンテンツや人生fmのAfter showを公開しているよ！とりあえずフォローだけでもしてみてね！</p>
-            <a href="https://www.pixiv.net/fanbox/creator/13627594"><img src={fanbox} /></a>
+            <div className="Social_Thumbnail">
+              <a href="https://www.pixiv.net/fanbox/creator/13627594"><img src={fanbox} /></a>
+            </div>
           </div>
           <div className="Margin32"/>
           <div className="Margin32"/>

@@ -14,12 +14,12 @@ export class Profile extends Component {
             <div className="HeaderContainer">
               <div className='Menu'>
                 <a className="MenuItemButton" href="https://kirimin-chan.site/?skip_anime=true">とっぷ</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//profile">じこしょうかい</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//videos">おすすめ動画</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//social">ソーシャル</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//products">プロダクト</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//gallery">素材</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//works">おしごと</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/profile">じこしょうかい</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/videos">おすすめ動画</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/social">ソーシャル</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/products">プロダクト</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/gallery">素材</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/works">おしごと</a>
               </div>
             </div>
         </header>
@@ -63,12 +63,14 @@ export class Profile extends Component {
               <h2>マシュマロ</h2>
               <p>マシュマロで質問やお悩み、はげましのおたよりなどを募集しているよ！プログラミングやエンジニア業界についての質問は配信で真面目に答えるよ！</p>
               <div className="Margin32"/>
-              <div className="Margin32"/>
+              <br/>
               <a href="https://marshmallow-qa.com/kirimin_chan" className="Button Pink">マシュマロをなげる！</a>
+              <br/>
               <br/>
               <div className="Margin32"/>
               <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w?view_as=subscriber" className="Button Pink">チャンネル登録する！</a>
               <div className="Margin32"/>
+              <br/>
               <div className="Margin32"/>
             </div>
           </div>

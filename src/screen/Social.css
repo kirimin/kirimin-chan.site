@@ -33,8 +33,22 @@
   max-width: 800px;
   width: 100%;
   height: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
+.Social_Twitter {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.Social_Thumbnail {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (max-width: 1200px) { /* mobile LL */
 }

@@ -96,12 +96,12 @@ export class Home extends Component {
               <img className='Home_HeaderImageLogo' src={logo} />
               <div className='Menu'>
                 <a className="MenuItemButton Home" href="https://kirimin-chan.site/">とっぷ</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//profile">じこしょうかい</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//videos">おすすめ動画</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//social">ソーシャル</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//products">プロダクト</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//gallery">素材</a>
-                <a className="MenuItemButton Home" href="https://kirimin-chan.site//works">おしごと</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site/profile">じこしょうかい</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site/videos">おすすめ動画</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site/social">ソーシャル</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site/products">プロダクト</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site/gallery">素材</a>
+                <a className="MenuItemButton Home" href="https://kirimin-chan.site/works">おしごと</a>
               </div>
             </div>
           </header>
@@ -125,12 +125,12 @@ export class Home extends Component {
             <img className='Home_HeaderImageLogo Skip' src={logo} />
             <div className='Menu'>
               <a className="MenuItemButton" href="https://kirimin-chan.site/">とっぷ</a>
-              <a className="MenuItemButton" href="https://kirimin-chan.site//profile">じこしょうかい</a>
-              <a className="MenuItemButton" href="https://kirimin-chan.site//videos">おすすめ動画</a>
-              <a className="MenuItemButton" href="https://kirimin-chan.site//social">ソーシャル</a>
-              <a className="MenuItemButton" href="https://kirimin-chan.site//products">プロダクト</a>
-              <a className="MenuItemButton" href="https://kirimin-chan.site//gallery">素材</a>
-              <a className="MenuItemButton" href="https://kirimin-chan.site//works">おしごと</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site/profile">じこしょうかい</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site/videos">おすすめ動画</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site/social">ソーシャル</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site/products">プロダクト</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site/gallery">素材</a>
+              <a className="MenuItemButton" href="https://kirimin-chan.site/works">おしごと</a>
             </div>
           </div>
         </header>

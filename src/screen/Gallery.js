@@ -17,18 +17,18 @@ export class Gallery extends Component {
             <div className="HeaderContainer">
               <div className='Menu'>
                 <a className="MenuItemButton" href="https://kirimin-chan.site/?skip_anime=true">とっぷ</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//profile">じこしょうかい</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//videos">おすすめ動画</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//social">ソーシャル</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//products">プロダクト</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//gallery">素材</a>
-                <a className="MenuItemButton" href="https://kirimin-chan.site//works">おしごと</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/profile">じこしょうかい</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/videos">おすすめ動画</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/social">ソーシャル</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/products">プロダクト</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/gallery">素材</a>
+                <a className="MenuItemButton" href="https://kirimin-chan.site/works">おしごと</a>
               </div>
             </div>
         </header>
         </section>
         <section className="Gallery_Body">
-          <div dangerouslySetInnerHTML={{__html: `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="きりみんちゃんのフリー素材" data-url="https://kirimin-chan.site/services" data-hashtags="きりみんちゃんねる" data-show-count="false">Tweet</a>`}}></div>
+          <div dangerouslySetInnerHTML={{__html: `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="きりみんちゃんのフリー素材" data-url="https://kirimin-chan.site/gallery" data-hashtags="きりみんちゃんねる" data-show-count="false">Tweet</a>`}}></div>
           <div dangerouslySetInnerHTML={{__html: `<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-normal" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>`}}></div>
           <h1>公式素材</h1>
           <hr/>
