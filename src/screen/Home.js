@@ -10,6 +10,13 @@ import './Home.css';
 
 export class Home extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state={
+      requireSkipAnime: false,
+    };
+  }
+
   render() {
     const youtubeOpts = {
       height: '390',
@@ -20,12 +27,11 @@ export class Home extends Component {
           loop:1,
         }
     };
-    let requireSkipAnime = new URLSearchParams(window.location.search).get('skip_anime')
 
     return (
       <div className="Home">
          <section>
-          {requireSkipAnime ? this.simpleHeader() : this.animationalHeader()}
+          {this.state.requireSkipAnime ? this.simpleHeader() : this.animationalHeader()}
         </section>
         <section className="Home_Movie">
           <div className="Home_MovieYoutube">
@@ -103,6 +109,7 @@ export class Home extends Component {
                 <a className="MenuItemButton Home" href="https://kirimin-chan.site/gallery">素材</a>
                 <a className="MenuItemButton Home" href="https://kirimin-chan.site/works">おしごと</a>
               </div>
+              <a className="Home_SkipButton" onClick={this._skipClick.bind(this)}>SKIP</a>
             </div>
           </header>
     )
@@ -137,9 +144,17 @@ export class Home extends Component {
     )
   }
 
+  componentWillMount() {
+    this.setState({requireSkipAnime: new URLSearchParams(window.location.search).get('skip_anime')})
+  }
+
   _onReady(event) {
     event.target.playVideo();
     event.target.mute();
+  }
+
+  _skipClick() {
+    this.setState({requireSkipAnime: true})
   }
 }
 
