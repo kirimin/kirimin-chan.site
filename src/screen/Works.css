@@ -16,6 +16,14 @@
   margin-top: 32px;
 }
 
+.Works_Body h2 {
+  color: #555;
+  font-size: 1.6em;
+  margin-bottom: 8px;
+  margin-top: 32px;
+}
+
+
 .Works_Body hr {
   height: 3px;
   border: none;
@@ -35,6 +43,9 @@
   height: auto;
 }
 
+.Works_Formrun {
+  margin-top: 128px;
+}
 
 @media screen and (max-width: 1200px) { /* mobile LL */
 }
