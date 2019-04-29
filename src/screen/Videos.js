@@ -115,6 +115,12 @@ export class Videos extends Component {
                   "プログラマーの仕事について紹介した動画だよ", 
                   youtubeOpts)
               }
+              {this.createVideoCard(
+                  "UORE-hhpnLM",
+                  "【勉強会】きりみんちゃん流LT/登壇資料スライドを先延ばしにせず作る方法【KeyNote】【VTuber】",
+                  "勉強会とかで使う発表スライドの使い方を解説した動画だよ", 
+                  youtubeOpts)
+              }
             </div>
           <h1>📹おすすめ配信アーカイブ</h1>
             <div className="Videos_VideoContents">
@@ -131,13 +137,13 @@ export class Videos extends Component {
                   youtubeOpts)
               }
               {this.createVideoCard(
-                  "xLE1vvs6HTs",
+                  "sqCdYOMNdnA",
                   "きりみんちゃん🎉一周年&登録者1000人&フォロワー1000人お祝い配信🎉【アーカイブ】【VTuber】",
                   "デビュー１周年記念の時の配信だよ。いろんな企画をやったり盛りだくさんでした", 
                   youtubeOpts)
               }
               {this.createVideoCard(
-                  "sqCdYOMNdnA",
+                  "xLE1vvs6HTs",
                   "ナナメさん✕きりみんちゃんコラボ配信【アーカイブ】",
                   "おともだちのナナメさんとコラボで対談した回だよ。いろいろなお話をしました", 
                   youtubeOpts)
