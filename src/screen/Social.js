@@ -6,10 +6,6 @@ import fanbox from '../assets/fanbox.png'
 
 export class Social extends Component {
 
-  constructor() {
-    super()
-  }
-
   render() {
     return (
       <div className="Social">
@@ -41,13 +37,13 @@ export class Social extends Component {
             <hr/>
             <p>きりみんちゃんのInstagramでは主にきりみんちゃんのイラストやお写真を投稿しています！</p>
             <div className="Social_Thumbnail">
-              <a href="https://www.instagram.com/kirimin/"><img src={insta} /></a>
+              <a href="https://www.instagram.com/kirimin/"><img alt="screenshot" src={insta} /></a>
             </div>
             <h1>FANBOX</h1>
             <hr/>
             <p>FANBOXではブログ的な内容を書いたり、有料プランの方向けに特別コンテンツや人生fmのAfter showを公開しているよ！とりあえずフォローだけでもしてみてね！</p>
             <div className="Social_Thumbnail">
-              <a href="https://www.pixiv.net/fanbox/creator/13627594"><img src={fanbox} /></a>
+              <a href="https://www.pixiv.net/fanbox/creator/13627594"><img alt="screenshot" src={fanbox} /></a>
             </div>
           </div>
           <div className="Margin32"/>

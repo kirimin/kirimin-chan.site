@@ -4,10 +4,6 @@ import './Works.css'
 
 export class Works extends Component {
 
-  constructor() {
-    super()
-  }
-
   render() {
     return (
       <div className="Works">

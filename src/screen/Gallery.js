@@ -4,10 +4,6 @@ import './Gallery.css';
 
 export class Gallery extends Component {
 
-  constructor() {
-    super()
-  }
-
   render() {
     return (
       <div className="Gallery">
@@ -34,8 +30,8 @@ export class Gallery extends Component {
           <hr/>
           <p>きりみんちゃんの画像を利用する場合はこちらをご利用ください。</p>
           <div className="Gallery_OfficeialImageContainer">
-            <img src="https://kirimin-scrapbox.firebaseapp.com/free_assets/official_image1.png"/>
-            <img src="https://kirimin-scrapbox.firebaseapp.com/free_assets/official_image2.png"/>
+            <img alt="立ち絵１" src="https://kirimin-scrapbox.firebaseapp.com/free_assets/official_image1.png"/>
+            <img alt="立ち絵２" src="https://kirimin-scrapbox.firebaseapp.com/free_assets/official_image2.png"/>
           </div>
           <h1>フリー素材</h1>
           <hr/>
@@ -55,8 +51,8 @@ export class Gallery extends Component {
           <hr/>
           <p>きりみんちゃんのバナーだよ！よかったらつかってね！</p>
           <div className="Gallery_BannerContainer">
-            <img src="https://kirimin-scrapbox.firebaseapp.com/free_assets/banner.png"/>
-            <img src="https://kirimin-scrapbox.firebaseapp.com/free_assets/banner2.png"/>
+            <img alt="横バナー" src="https://kirimin-scrapbox.firebaseapp.com/free_assets/banner.png"/>
+            <img alt="縦バナー" src="https://kirimin-scrapbox.firebaseapp.com/free_assets/banner2.png"/>
           </div>
         </section>
       </div>
@@ -68,7 +64,7 @@ export class Gallery extends Component {
       <div className="Gallery_ImageCard">
         <input type="text" value={url} className="form-control" readOnly></input>
         <br/>
-        <img src={url}/>
+        <img alt="フリー素材" src={url}/>
       <br/>
     </div>
     )

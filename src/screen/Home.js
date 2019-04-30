@@ -92,14 +92,14 @@ export class Home extends Component {
                 <a href="https://twitter.com/kirimin_chan" className="Home_TwitterButton" onClick="ga('send', 'event', 'link', 'click', 'TwitterlButton')">Twitterアカウントへ　＞</a>
               </div>
               <div className='Home_HeaderOpImage1Cover' />
-              <img className='Home_HeaderOpImage1' src={op1}/>
+              <img alt="OpImage1" className='Home_HeaderOpImage1' src={op1}/>
               <div className='Home_HeaderOpImage2Cover' />
-              <img className='Home_HeaderOpImage2' src={op2}/>
+              <img alt="OpImage2" className='Home_HeaderOpImage2' src={op2}/>
               <div className='Home_HeaderOpImage3Cover' />
-              <img className='Home_HeaderOpImage3' src={op3}/>
+              <img alt="OpImage3" className='Home_HeaderOpImage3' src={op3}/>
               <div className='Home_HeaderImageCover' />
-              <img className='Home_HeaderImage' src={header} />
-              <img className='Home_HeaderImageLogo' src={logo} />
+              <img alt="Topイラスト" className='Home_HeaderImage' src={header} />
+              <img alt="ロゴ" className='Home_HeaderImageLogo' src={logo} />
               <div className='Menu'>
                 <a className="MenuItemButton Home" href="https://kirimin-chan.site/">とっぷ</a>
                 <a className="MenuItemButton Home" href="https://kirimin-chan.site/profile">じこしょうかい</a>
@@ -128,8 +128,8 @@ export class Home extends Component {
               <a href="https://www.youtube.com/channel/UCqN87Ye4TNLB04EFhxJ0L5w" className="Home_ChannelButton" onClick="ga('send', 'event', 'link', 'click', 'ChannelButton')">YouTubeチャンネルへ　＞</a>
               <a href="https://twitter.com/kirimin_chan" className="Home_TwitterButton" onClick="ga('send', 'event', 'link', 'click', 'TwitterlButton')">Twitterアカウントへ　＞</a>
             </div>
-            <img className='Home_HeaderImage Skip' src={header} />
-            <img className='Home_HeaderImageLogo Skip' src={logo} />
+            <img alt="Topイラスト" className='Home_HeaderImage Skip' src={header} />
+            <img alt="ロゴ" className='Home_HeaderImageLogo Skip' src={logo} />
             <div className='Menu'>
               <a className="MenuItemButton" href="https://kirimin-chan.site/">とっぷ</a>
               <a className="MenuItemButton" href="https://kirimin-chan.site/profile">じこしょうかい</a>

@@ -49,7 +49,7 @@ export class Videos extends Component {
         </section>
         <section className="Videos_Body">
           <div>
-            <h1>📛初見さんおすすめ動画</h1>
+            <h1><span role="img" aria-label="名札">📛</span>初見さんおすすめ動画</h1>
             <div className="Videos_VideoContents">
               {this.createVideoCard(
                 "bGTEriE9zu0",
@@ -89,7 +89,7 @@ export class Videos extends Component {
               }
             </div>
           </div>
-          <h1>📱おすすめ技術動画</h1>
+          <h1><span role="img" aria-label="スマートフォン">📱</span>おすすめ技術動画</h1>
             <div className="Videos_VideoContents">
               {this.createVideoCard(
                   "oqBhBCwlf_c",
@@ -122,7 +122,7 @@ export class Videos extends Component {
                   youtubeOpts)
               }
             </div>
-          <h1>📹おすすめ配信アーカイブ</h1>
+          <h1><span role="img" aria-label="ビデオカメラ">📹</span>おすすめ配信アーカイブ</h1>
             <div className="Videos_VideoContents">
               {this.createVideoCard(
                   "2cw1m6sSKZ4",
@@ -155,7 +155,7 @@ export class Videos extends Component {
                   youtubeOpts)
               }
             </div>
-            <h1>❓おすすめお悩み回答動画シリーズ</h1>
+            <h1><span role="img" aria-label="はてな">❓</span>おすすめお悩み回答動画シリーズ</h1>
               <div className="Videos_VideoContents">
                 {this.createVideoCard(
                     "K4LylnD2650",
@@ -188,7 +188,7 @@ export class Videos extends Component {
                     youtubeOpts)
                 }
             </div>
-          <h1>✨最新動画</h1>
+          <h1><span role="img" aria-label="きらきら">✨</span>最新動画</h1>
           <div className="Videos_VideoContents">
             {videos}
           </div>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Games.css'
 import osero from '../../assets/osero.png'
 
@@ -20,7 +20,7 @@ const Games = () => (
         <a className="Button" href="https://kirimin-chan.site/games/osero">プレイ</a>
         <br/>
         <br/>
-        <a href="https://kirimin-chan.site/games/osero"><img src={osero} /></a>
+        <a href="https://kirimin-chan.site/games/osero"><img alt='screenshot' src={osero} /></a>
         <br/>
         <br/>
         <br/>

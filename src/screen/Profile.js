@@ -25,7 +25,7 @@ export class Profile extends Component {
         </header>
         </section>
         <section className="Profile_KiriminChan" id="kirimin-chan">
-          <img className="Profile_KiriminChanLeft" src={KiriminChan}/>
+          <img className="Profile_KiriminChanLeft" alt='kirimin-chan' src={KiriminChan}/>
           <div className="Profile_KiriminChanRight">
             <div className="Profile_KiriminChanDescription">
               <h1>きりみんちゃん</h1>

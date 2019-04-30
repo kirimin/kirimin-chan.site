@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Services.css'
 import kiriminchancamera from '../../assets/kiriminchancamera.png'
-
 
 const Services = () => (
     <div className="Services">
@@ -17,7 +16,7 @@ const Services = () => (
         <h1>きりみんちゃんカメラ</h1>
         <p>きりみんちゃんと一緒にお写真が取れるアプリです。</p>
         <br/>
-        <a className="Services_Screenshot" href="https://kirimin-chan.site/Services/osero"><img src={kiriminchancamera} /></a>
+        <a className="Services_Screenshot" href="https://kirimin-chan.site/Services/osero"><img alt='screenshot' src={kiriminchancamera} /></a>
         <br/>
         <a href='https://play.google.com/store/apps/details?id=me.kirimin.kirimin_chan_camera&hl=ja&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img className="Services_PlayStoreLink" alt='Google Play で手に入れよう' src='https://play.google.com/intl/ja/badges/images/generic/ja_badge_web_generic.png'/></a>
         <br/>
