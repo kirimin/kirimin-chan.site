@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import KiriminChan from '../assets/kirimin-chan2.png'
+import KiriminChan from '../assets/立ち絵.gif'
 import './Profile.css';
 
 export class Profile extends Component {
