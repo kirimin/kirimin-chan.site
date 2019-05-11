@@ -52,9 +52,9 @@ export class Videos extends Component {
             <h1><span role="img" aria-label="名札">📛</span>初見さんおすすめ動画</h1>
             <div className="Videos_VideoContents">
               {this.createVideoCard(
-                "bGTEriE9zu0",
-                "【バーチャル幼女プログラマー】きりみんちゃんの自己紹介！【VTuber】",
-                "きりみんちゃんの自己紹介動画だよ！ちょっと古いけどきりみんちゃんのことがわかるよ！", 
+                "6PQEr6eDp8U",
+                "【自己紹介】バーチャル男声幼女プログラマーきりみんちゃんです！(*˘︶˘*).｡.:*♡【VTuber】",
+                "きりみんちゃんの自己紹介動画だよ！", 
                 youtubeOpts)
               }
               {this.createVideoCard(

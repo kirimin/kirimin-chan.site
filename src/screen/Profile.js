@@ -29,10 +29,10 @@ export class Profile extends Component {
           <div className="Profile_KiriminChanRight">
             <div className="Profile_KiriminChanDescription">
               <h1>きりみんちゃん</h1>
-              <h2>バーチャル幼女プログラマー</h2>
+              <h2>バーチャル男声幼女プログラマー</h2>
               <hr/>
-              <p>きりみんちゃんはバーチャル幼女プログラマーとして活動している個人VTuberです。プログラミングやエンジニアの仕事に関する動画を作成したり、技術的な質問に答える配信やライブコーディングなども行っています。</p>
-              <p>声はおじさんだけど７さいの幼女。フリーランスのプログラマーとして働いているが、個人事業主なので児童労働ではない。得意分野はAndroidアプリ開発。</p>
+              <p>きりみんちゃんはバーチャル男声幼女プログラマーとして活動しているVTuberです。プログラミングやエンジニアの仕事に関する動画を作成したり、技術的な質問に答える配信やライブコーディングなども行っています。</p>
+              <p>７さいの幼女。フリーランスのプログラマーとして働いているが、個人事業主なので児童労働ではない。得意分野はAndroidアプリ開発。</p>
             </div>
             <div className="Profile_KiriminChanStatus">
               <table>
