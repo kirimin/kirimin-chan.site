@@ -60,11 +60,11 @@ export class Profile extends Component {
               <a href="https://twitter.com/search?q=%23kirimin_tech&src=typd" className="Button Pink">ファンアートを見てみる</a>
             </div>
             <div className="Profile_KiriminChanDescription">
-              <h2>マシュマロ</h2>
-              <p>マシュマロで質問やお悩み、はげましのおたよりなどを募集しているよ！プログラミングやエンジニア業界についての質問は配信で真面目に答えるよ！</p>
+              <h2>進捗ノート</h2>
+              <p>進捗ノートというサービスではげましのおたよりなどを募集しているよ！プログラミングやエンジニア業界についての質問は配信で真面目に答えるよ！</p>
               <div className="Margin32"/>
               <br/>
-              <a href="https://marshmallow-qa.com/kirimin_chan" className="Button Pink">マシュマロをなげる！</a>
+              <a href="https://shinchoku.net/notes/36823K" className="Button Pink">匿名ふりかけ</a>
               <br/>
               <br/>
               <div className="Margin32"/>
