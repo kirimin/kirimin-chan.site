@@ -36,7 +36,7 @@ export class Home extends Component {
         <section className="Home_Movie">
           <div className="Home_MovieYoutube">
             <YouTube className="Home_MovieYoutubeFrame"
-              videoId="-6PQEr6eDp8U"
+              videoId="6PQEr6eDp8U"
               opts={youtubeOpts}
               onReady={this._onReady}
             />
