@@ -1,3 +1,183 @@
-body {
-    
+.headerMenu {
+    background-color: #FF5779;
+    height: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.headerMenu p {
+    color: white;
+    font-size: 30px;
+    margin-right: 32px;
+}
+
+.keyVisual {
+    background-color: #FFFEDF;
+}
+
+.keyVisualParent {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
+.keyVisualLeft {
+    width: 50%;
+}
+
+.keyVisualLeft img {
+    width: 100%;
+}
+
+.keyVisualRight {
+    width: 50%;
+}
+
+.keyVisualRight img {
+    width: 100%;
+}
+
+.keyVisualSubTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+}
+
+.keyVisualDiscription {
+    margin-top: 32px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #A46464;
+}
+
+.links {
+    background-color: #7FD4FF;
+}
+
+.linksParent {
+    padding-top: 64px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.linksCardParent {
+    width: 500px;
+    height: 200px;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px #888;
+    background-color: #ffffff;
+    padding: 16px 16px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 32px;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.linksCardParent:hover {
+    background-color: #E2F5FF;
+}
+
+.linksCardLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent:-999px;
+    z-index: 2;
+}
+
+.linksCardTitle {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.linksCardIconParent {
+    position: relative;;
+}
+
+.linksCardIcon {
+    position: absolute;
+    right: 0px;
+    top: -10px;
+    width: 60px;
+    height: 60px;
+}
+
+.linksCardDescription {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.linksCardAccess {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 16px;
+    color: #6200EE;
+    font-weight: bold;
+}
+
+.profile {
+    background-color: #F0F0F0;
+    padding-bottom: 64px;
+}
+
+.profileTitle {
+    padding-top: 64px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #505050;
+}
+
+.profileSection1Parent {
+    display: flex;
+    padding-top: 32px;
+    flex-direction: row;
+    margin-bottom: 64px;
+}
+
+.profileDescriptions {
+    width: 50%;
+    font-size: 26px;
+    font-weight: bold;
+    color: #707070;
+}
+
+.profileIntroductionVideo {
+    width: 50%;
+}
+
+.profileSection2Parent {
+    display: flex;
+    flex-direction: row;
+}
+
+.profileImage1 {
+    height: 500px;
+    width: 50%;
+    object-fit: contain;
+}
+
+.profileImage2 {
+    width: 50%;
+    object-fit: contain;
+}
+
+@media (min-width: 1200px) {
+    .sectionContents {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
