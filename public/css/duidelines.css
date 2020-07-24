@@ -1,0 +1,46 @@
+.guidelines {
+    height: 100vh;
+    background-color: #F0F0F0;
+    padding-bottom: 64px;
+    padding-top: 64px;
+}
+
+.guidelinesTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FF5779;
+}
+
+.guidelinesSubTitle {
+    font-size: 26px;
+    font-weight: bold;
+    color: #FF5779;
+    margin-top: 32px;
+}
+
+.guidelinesDescription {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 1200px) {
+    .sectionContents {
+        padding-right: 32px;
+        padding-left: 32px;  
+    }
+}
+
+@media (max-width: 800px) {
+    .guidelinesTitle {
+        font-size: 20px;
+    }
+    
+    .guidelinesSubTitle {
+        font-size: 16px;
+    }
+    
+    .guidelinesDescription {
+        font-size: 14px;
+    }
+}

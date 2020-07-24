@@ -1,19 +1,3 @@
-.headerMenu {
-    background-color: #FF5779;
-    height: 80px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.headerMenu p {
-    color: white;
-    font-size: 30px;
-    margin-right: 32px;
-}
 
 .keyVisual {
     background-color: #FFFEDF;
@@ -103,7 +87,7 @@
 }
 
 .linksCardIconParent {
-    position: relative;;
+    position: relative;
 }
 
 .linksCardIcon {
@@ -171,13 +155,156 @@
 
 .profileImage2 {
     width: 50%;
+    margin-left: 32px;
     object-fit: contain;
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
     .sectionContents {
-        width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
+        padding-right: 32px;
+        padding-left: 32px;  
+    }
+
+    .keyVisualParent {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .keyVisualSubTitle {
+        font-size: 24px;
+    }
+
+    .keyVisualDiscription {
+        font-size: 20px;
+    }
+
+    .keyVisualLeft {
+        width: 70%;
+    }
+    
+    .keyVisualRight {
+        width: 70%;
+    }
+
+    .keyVisualLeft img {
+        width: 80%;
+    }
+    
+    .keyVisualRight img {
+        width: 80%;
+    }
+
+    .profileDescriptions {
+        width: 100%;
+    }
+
+    .profileIntroductionVideo {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .keyVisualSubTitle {
+        font-size: 20px;
+    }
+
+    .keyVisualDiscription {
+        font-size: 16px;
+    }
+
+    .profileTitle {
+        padding-top: 64px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #505050;
+    }
+    
+    .profileDescriptions {
+        width: 100%;
+        font-size: 22px;
+    }
+    
+    .profileIntroductionVideo {
+        display: none;
+    }
+    
+    .profileSection2Parent {
+        flex-direction: column;
+    }
+    
+    .profileImage1 {
+        height: 500px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    .profileImage2 {
+        width: 100%;
+        margin-left: 0px;
+        object-fit: contain;
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .keyVisualParent {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .keyVisualSubTitle {
+        font-size: 16px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .keyVisualDiscription {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .keyVisualLeft img {
+        width: 100%;
+    }
+    
+    .keyVisualRight img {
+        width: 100%;
+    }
+    
+    .linksCardParent {
+        margin-right: 0px;
+        margin-left: 0px;
+        color: #333;
+    }
+    
+    .linksCardTitle {
+        font-size: 16px;
+    }
+    
+    .linksCardIcon {
+        top: -10px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .linksCardDescription {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    .profileTitle {
+        font-size: 28px;
+    }
+
+    .profileDescriptions {
+        font-size: 16px;
+    }
+
+    .profileIntroductionVideo {
+        display: none;
     }
 }

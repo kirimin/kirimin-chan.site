@@ -1,0 +1,49 @@
+.contact {
+    height: 100vh;
+    background-color: #F0F0F0;
+    padding-bottom: 64px;
+    padding-top: 64px;
+}
+
+.contactTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contactSubTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 32px;
+}
+
+.contactDescription {
+    font-size: 20px;
+    color: #333;
+}
+
+@media (max-width: 1200px) {
+    .sectionContents {
+        padding-right: 32px;
+        padding-left: 32px;  
+    }
+}
+
+@media (max-width: 800px) {
+    .contactTitle {
+        font-size: 20px;
+    }
+    
+    .contactSubTitle {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-top: 32px;
+    }
+    
+    .contactDescription {
+        font-size: 16px;
+        color: #333;
+    }
+}
