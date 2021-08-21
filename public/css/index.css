@@ -159,6 +159,56 @@
     object-fit: contain;
 }
 
+.works {
+    background-color: #F0F0F0;
+    padding-bottom: 64px;
+}
+
+.worksTitle {
+    margin-bottom: 24px;
+    padding-top: 64px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #505050;
+}
+
+.worksList {
+    margin-bottom: 32px;
+}
+
+.worksListItem {
+    margin-bottom: 24px;
+    flex-direction: column;
+    border-bottom-style: solid;
+    border-radius: 1px;
+    border-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+}
+
+.worksListDate {
+    width: 20%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #707070;
+}
+
+.worksListName {
+    width: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #707070;
+    margin-right: 40px;
+}
+
+.worksListWork {
+    width: 30%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #707070;
+}
+
+
 @media (max-width: 1200px) {
     .sectionContents {
         padding-right: 32px;
